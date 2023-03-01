@@ -3,6 +3,7 @@
 
     </head>
     <body>
+
         <div>Joshua's Generals</div>
         <div class="login">
         <form method="POST">
@@ -13,5 +14,6 @@
             <input type="submit" name="login">
         </form>
         </div>
+
     </body>
 </html>
