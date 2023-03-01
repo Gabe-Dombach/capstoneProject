@@ -1,6 +1,7 @@
 <html>
     <head>
 
+
     <?php require "navbar.view.php";?>
 
     <link rel="stylesheet" href="../view/css/Store.css">
@@ -411,6 +412,7 @@
 
     </div>
    
+
 
     </body>
 </html>
