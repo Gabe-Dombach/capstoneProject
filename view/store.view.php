@@ -1,26 +1,12 @@
 <html>
     <head>
-
-
     <?php require "navbar.view.php";?>
-
     <link rel="stylesheet" href="../view/css/Store.css">
-
-
-
     </head>
-
-
     <body>
-        
-    
     <div class="row">
-
                     <div class="item">
-
-
-
-                    <img src="../pictures/brake pads.jpg" alt="b pads">
+                    <img src="../pictures/brake pads.jpg" alt="b pads" class="img">
 
                     <p class="name"> Brake pads</p>
 
@@ -37,7 +23,7 @@
 
 
 
-                <img src="../pictures/catalytic converter.jpg" alt="converter">
+                <img src="../pictures/catalytic converter.jpg" alt="converter" class="img">
 
                 <p class="name"> catalytic converter </p>
 
@@ -57,7 +43,7 @@
 
 
 
-                <img src="../pictures/suspension kit.jpg" alt="suspension">
+                <img src="../pictures/suspension kit.jpg" alt="suspension" class="img">
 
                 <p class="name">suspension kit</p>
 
@@ -84,7 +70,7 @@
 
 
 
-<img src="../pictures/acer laptop.jpg" alt="acer laptop">
+<img src="../pictures/acer laptop.jpg" alt="acer laptop" class="img">
 
 <p class="name">acer laptop</p>
 
@@ -95,14 +81,11 @@
 
 
     </div>
-
-
-
     <div class="item">
 
 
 
-                <img src="../pictures/asus monitor.jpg" alt="asus monitor">
+                <img src="../pictures/asus monitor.jpg" alt="asus monitor" class="img">
 
                 <p class="name">asus monitor</p>
 
@@ -121,7 +104,7 @@
 
 
 
-                <img src="../pictures/bose speaker.jpg" alt="motor oil">
+                <img src="../pictures/bose speaker.jpg" alt="motor oil" class="img">
 
                 <p class="name"> bose</p>
 
@@ -149,7 +132,7 @@
 
 
 
-<img src="../pictures/kids jeans.jpg" alt="motor oil">
+<img src="../pictures/kids jeans.jpg" alt="motor oil" class="img">
 
 <p class="name">kids jeans</p>
 
@@ -167,7 +150,7 @@
 
 
 
-<img src="../pictures/kids like a boss shirt.jpg" alt="motor oil">
+<img src="../pictures/kids like a boss shirt.jpg" alt="motor oil" class="img">
 
 <p class="name">kids t-shirt</p>
 
@@ -185,7 +168,7 @@
 
 
 
-<img src="../pictures/kids minecraft like a boss shirt.jpg" alt="motor oil">
+<img src="../pictures/kids minecraft like a boss shirt.jpg" alt="motor oil" class="img">
 
 <p class="name">minecraft kids like a boss tshirt</p>
 
@@ -196,7 +179,7 @@
 
 
     </div>
-
+    </div>
 
 
 
@@ -208,7 +191,7 @@
 
 
 
-<img src="../pictures/camping chair.jpg" alt="motor oil">
+<img src="../pictures/camping chair.jpg" alt="motor oil" class="img">
 
 <p class="name">Campaing chair</p>
 
@@ -226,7 +209,7 @@
 
 
 
-<img src="../pictures/camping cooking set.jpg" alt="motor oil">
+<img src="../pictures/camping cooking set.jpg" alt="motor oil" class="img">
 
 <p class="name">camping cooking set</p>
 
@@ -243,7 +226,7 @@
 
 
 
-<img src="../pictures/camping lanterns.jpg" alt="motor oil">
+<img src="../pictures/camping lanterns.jpg" alt="motor oil" class="img">
 
 <p class="name"> Camping lanterns</p>
 
@@ -267,7 +250,7 @@
 
 
 
-<img src="../pictures/3 seat couch.jpg" alt="motor oil">
+<img src="../pictures/3 seat couch.jpg" alt="motor oil" class="img">
 
 <p class="name">3 seat couch</p>
 
@@ -284,7 +267,7 @@
 
 
 
-<img src="../pictures/dining room table set.jpg" alt="motor oil">
+<img src="../pictures/dining room table set.jpg" alt="motor oil" class="img">
 
 <p class="name">dining room table</p>
 
@@ -301,13 +284,13 @@
 
 
 
-<img src="../pictures/dresser.jpg" alt="motor oil">
+<img src="../pictures/dresser.jpg" alt="motor oil" class="img">
 
 <p class="name"> dresser </p>
 
-<p class="price"> 69.99</div>
+<p class="price"> 69.99</p>
 
-<div class="dsc"> oak wood dresser </div>
+<p class="dsc"> oak wood dresser </p>
 
 
 
@@ -317,14 +300,14 @@
 
 
 
-    <div row = "row">
+    <div class = "row">
 
 
     <div class="item">
 
 
 
-<img src="../pictures/candy land.jpg" alt="motor oil">
+<img src="../pictures/candy land.jpg" alt="motor oil" class="img">
 
 <p class="name">candy land</p>
 
@@ -341,7 +324,7 @@
 
 
 
-<img src="../pictures/connect 4.jpg" alt="motor oil">
+<img src="../pictures/connect 4.jpg" alt="motor oil" class="img">
 
 <p class="name"> connect 4</p>
 
@@ -358,7 +341,7 @@
 
 
 
-<img src="../pictures/kids lego set.jpg" alt="motor oil">
+<img src="../pictures/kids lego set.jpg" alt="motor oil" class="img">
 
 <p class="name">lego set</p>
 
@@ -379,7 +362,7 @@
 
 
 
-<img src="../pictures/elf makeup.jpg" alt="motor oil">
+<img src="../pictures/elf makeup.jpg" alt="motor oil" class="img">
 
 <p class="name"> elf makeup </p>
 
@@ -397,7 +380,7 @@
 
 
 
-<img src="../pictures/colgate toothpaste.jpg" alt="motor oil">
+<img src="../pictures/colgate toothpaste.jpg" alt="motor oil" class="img">
 
 <p class="name">colgate toothpaste</p>
 

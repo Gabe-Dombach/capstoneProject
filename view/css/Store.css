@@ -1,0 +1,13 @@
+.img{
+    width: 30%;
+    height: 30%;
+}
+.item{
+    border: 1px solid black;
+    max-width: 45%;
+    max-height: 45%;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
