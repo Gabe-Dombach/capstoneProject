@@ -11,27 +11,30 @@
         $user = $_POST['username'];
         $inpass = $_POST['password'];
         $conn = connect();
-        $sql = "Select pswrd,accntType,ID FROM users WHERE username =$user";
+        $sql = "Select pswrd,accntType,ID FROM users WHERE email ='$user'";
         $res = mysqli_query($conn, $sql);
         $data = mysqli_fetch_all($res,MYSQLI_ASSOC);
-        $hash = $data['pswrd'][0];
+        // print_r($data);
+        // exit();
+        $hash = $data[0]['pswrd'];
+
         if(password_verify($inpass,$hash)){
             session_start();
             $_SESSION['user'] = $user;
-            $_SESSION['ID'] = $data['ID'][0];
-            $_SESSION['accntType'] = $data['accntType'][0];
+            $_SESSION['ID'] = $data[0]['ID'];
+            $_SESSION['accntType'] = $data[0]['accntType'];
             $_SESSION['LAST_ACTIVITY'] = time();
 
-            if($data['accntType'][0] == 'mgr'){
-                $mysqli->close();
+            if($data[0]['accntType'] == 'mgr'){
+                mysqli_close($conn);
                 header("Location:manager.php");
             }
-            if($data['accntType'][0] == 'usr'){
-                $mysqli->close();
+            if($data[0]['accntType'] == 'usr'){
+                mysqli_close($conn);
                 header("Location:store.php");
             }
-            if($data['accntType'][0] == 'slr'){
-                $mysqli->close();
+            if($data[0]['accntType'] == 'slr'){
+                mysqli_close($conn);
                 header("Location:seller.php");
             }
         }
