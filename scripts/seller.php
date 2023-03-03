@@ -16,7 +16,7 @@
             // Generate unique filename to prevent overwriting files with same name
             $newFileName = uniqid('', true) . '.' . pathinfo($fileName, PATHINFO_EXTENSION);
             // Set the path where the file should be saved
-            $destination = '../pictures' . $newFileName;
+            $destination = '../pictures/' . $newFileName;
             // Move the file from its temporary location to the destination directory
             move_uploaded_file($fileTmpName, $destination);
 
