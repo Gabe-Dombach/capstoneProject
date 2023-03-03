@@ -15,10 +15,12 @@ $dbname = "joshuasgenerals";
 
 $sql = 
     "CREATE TABLE IF NOT EXISTS users (
-        ID BIGINT AUTO_INCREMENT UNIQUE PRIMARY KEY,
+        ID BIGINT AUTO_INCREMENT  PRIMARY KEY,
         email VARCHAR(50) UNIQUE NOT NULL,
-        fname VARCHAR(50),lname VARCHAR(50),
+        fname VARCHAR(50),
+        lname VARCHAR(50),
         pswrd VARCHAR(200),accntType CHAR(3));
+        
     CREATE TABLE IF NOT EXISTS cards (
         ID BIGINT,
         crdNum VARCHAR(19),
@@ -26,11 +28,12 @@ $sql =
         expDate DATE,
         FOREIGN KEY (ID) REFERENCES users(id)
     );
+
     CREATE TABLE IF NOT EXISTS inventory(
         ID BIGINT PRIMARY KEY AUTO_INCREMENT,
         sellerID BIGINT,
         department VARCHAR(10),
-        title VARCHAR(50),
+        title VARCHAR(50) UNIQUE,
         description VARCHAR(250),
         image VARCHAR(200),
         imageAlt VARCHAR(50),
