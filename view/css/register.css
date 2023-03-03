@@ -1,11 +1,11 @@
-.login{
+.register{
     border: solid black 5px;
     border-radius: 100px;
     margin-left: 35%;
     margin-right: 35%;
     margin-top: 15%;
 }
-.loginform{
+.registerform{
     margin-left: 25%;
 }
 .submit{
@@ -28,4 +28,7 @@
 }
 body{
     background-color:lightsteelblue;
+}
+.link{
+    margin-left: -10%;
 }
