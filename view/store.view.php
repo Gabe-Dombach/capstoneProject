@@ -7,19 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joshua's Generals</title>
 
-    <?php 
-        require "navbar.view.php";
-        
-    
-    ?>
+    <?php require "navbar.view.php";?>
 
     <link rel="stylesheet" href="../view/css/Store.css">
-
-
-
     </head>
-
-
     <body>
     <div class = searchbar>
         <form method="GET">
