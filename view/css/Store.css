@@ -1,13 +1,15 @@
 .img{
-    width: 30%;
-    height: 30%;
+    width: 40%;
+    height: 40%;
 }
 .item{
     border: 1px solid black;
-    max-width: 45%;
-    max-height: 45%;
+    max-width: 30%;
+    max-height: 30%;
+    padding-left: 10%;
 }
 .row{
     display: flex;
     flex-direction: row;
+    align-content: space-between;
 }
