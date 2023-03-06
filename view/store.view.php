@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="../view/css/Store.css">
     </head>
     <body>
-
-        <form method="get">
+    <div class = searchbar>
+        <form method="GET">
             <label for="department">Browse by department:</label>
             <select name="department" id="department">
                 <option value="" <?php if (!isset($_GET['department'])) echo 'selected'; ?>>All departments</option>
@@ -27,10 +27,16 @@
                 <option value="uncategorized" <?php if (isset($_GET['department']) && $_GET['department'] === 'uncategorized') echo 'selected'; ?>>Uncategorized</option>             
             </select>
             <input type="submit" value="Filter">
-        </form>
+            </form>
+            <form method="GET">
+                <input type="text" name="search" placeholder="Search">
+                <input type="submit" value="Search" name="submitSearch">
+            </form>
+        </div>
         <?php
 // Build the SQL query to retrieve the inventory items
 $sql = 'SELECT * FROM inventory';
+$conn = connect();
 
 // If a department was selected, modify the SQL query to filter by department
 if (isset($_GET['department']) && $_GET['department'] !== '') {
@@ -38,8 +44,18 @@ if (isset($_GET['department']) && $_GET['department'] !== '') {
     $sql .= " WHERE department = '$department'";
 }
 
+if(isset($_GET['submitSearch'])){
+    $search = mysqli_real_escape_string($conn,$_GET['search']);
+    if(isset($_GET['department'])){
+       $newSql = " AND (title LIKE '%$search%' OR description LIKE '%$search%')";
+    }
+    else{
+        $newSql = " WHERE title LIKE '%$search%' OR description LIKE '%$search%'";
+    }
+    $sql .= $newSql;
+}
+
 // Execute the SQL statement
-$conn = connect();
 
 $res = mysqli_query($conn, $sql);
 
@@ -54,6 +70,9 @@ while ($row = $res->fetch_assoc()) {
     echo '<p>' . htmlspecialchars($row['description']) . '</p>';
     echo '<img src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
     echo '<p>Price: $' . htmlspecialchars($row['price']) . '</p>';
+    echo '  <form action=addCart.php method=POST>
+                <input type=submit value="Add To Cart" name='.$row['title'].'
+            </form>';
     echo '</div>';
     $count++;
     if ($count % 3 == 0) {
