@@ -12,14 +12,13 @@
             <input type = text placeholder="Title Here" name=title >
             <input type = text placeholder="Description Here" name=descrpt>
             <select name=dep id =dep>
-                <option value="All Departments">All Departments</option>
-                <option value="Automotive parts">Automotive parts</option>
+                <option value="automotive_parts">Automotive parts</option>
                 <option value="Electronics">Electronics</option>
                 <option value="Clothing">Clothing</option>
-                <option value="Outdoor supplies">Outdoor supplies</option>
+                <option value="outdoor_supplies">Outdoor supplies</option>
                 <option value="Furniture">Furniture</option>
-                <option value="Children’s toys and games">Children’s toys and games</option>
-                <option value="Health and beauty">Health and beauty</option>
+                <option value="children’s_toys_and_games">Children’s toys and games</option>
+                <option value="health_and_beauty">Health and beauty</option>
                 <option value="uncatagorized">uncatagorized</option>
             </select>
             <input type = text placeholder="Price" name=price>

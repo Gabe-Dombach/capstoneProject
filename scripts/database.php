@@ -32,7 +32,7 @@ $sql =
     CREATE TABLE IF NOT EXISTS inventory(
         ID BIGINT PRIMARY KEY AUTO_INCREMENT,
         sellerID BIGINT,
-        department VARCHAR(10),
+        department VARCHAR(50),
         title VARCHAR(50) UNIQUE,
         description VARCHAR(250),
         image VARCHAR(200),
@@ -49,5 +49,6 @@ $sql =
     CREATE TABLE IF NOT EXISTS carts(
         custID BIGINT,
         itemID BIGINT);";
+
 
 ?>
