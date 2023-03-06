@@ -9,6 +9,8 @@
         $password = trim($_POST["password"]);
         $accntType = trim($_POST["accntType"]);
 
+
+
         $password_regex = "/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/";
         if (!preg_match($password_regex, $password)) {
             // Password does not meet requirements
