@@ -16,15 +16,42 @@
         <form method="GET">
             <label for="department">Browse by department:</label>
             <select name="department" id="department">
-                <option value="" <?php if (!isset($_GET['department'])) echo 'selected'; ?>>All departments</option>
-                <option value="automotive_parts" <?php if (isset($_GET['department']) && $_GET['department'] === 'automotive_parts') echo 'selected'; ?>>Automotive parts</option>
-                <option value="electronics" <?php if (isset($_GET['department']) && $_GET['department'] === 'electronics') echo 'selected'; ?>>Electronics</option>
-                <option value="clothing" <?php if (isset($_GET['department']) && $_GET['department'] === 'clothing') echo 'selected'; ?>>Clothing</option>
-                <option value="outdoor_supplies" <?php if (isset($_GET['department']) && $_GET['department'] === 'outdoor_supplies') echo 'selected'; ?>>Outdoor supplies</option>
-                <option value="furniture" <?php if (isset($_GET['department']) && $_GET['department'] === 'furniture') echo 'selected'; ?>>Furniture</option>
-                <option value="childrens_toys_and_games" <?php if (isset($_GET['department']) && $_GET['department'] === 'childrens_toys_and_games') echo 'selected'; ?>>Children’s toys and games</option>
-                <option value="health_and_beauty" <?php if (isset($_GET['department']) && $_GET['department'] === 'health_and_beauty') echo 'selected'; ?>>Health and beauty</option>
-                <option value="uncategorized" <?php if (isset($_GET['department']) && $_GET['department'] === 'uncategorized') echo 'selected'; ?>>Uncategorized</option>             
+                <option value="" <?php if (!isset($_GET['department'])) {
+    echo 'selected';
+}
+?>>All departments</option>
+                <option value="automotive_parts" <?php if (isset($_GET['department']) && $_GET['department'] === 'automotive_parts') {
+    echo 'selected';
+}
+?>>Automotive parts</option>
+                <option value="electronics" <?php if (isset($_GET['department']) && $_GET['department'] === 'electronics') {
+    echo 'selected';
+}
+?>>Electronics</option>
+                <option value="clothing" <?php if (isset($_GET['department']) && $_GET['department'] === 'clothing') {
+    echo 'selected';
+}
+?>>Clothing</option>
+                <option value="outdoor_supplies" <?php if (isset($_GET['department']) && $_GET['department'] === 'outdoor_supplies') {
+    echo 'selected';
+}
+?>>Outdoor supplies</option>
+                <option value="furniture" <?php if (isset($_GET['department']) && $_GET['department'] === 'furniture') {
+    echo 'selected';
+}
+?>>Furniture</option>
+                <option value="childrens_toys_and_games" <?php if (isset($_GET['department']) && $_GET['department'] === 'childrens_toys_and_games') {
+    echo 'selected';
+}
+?>>Children’s toys and games</option>
+                <option value="health_and_beauty" <?php if (isset($_GET['department']) && $_GET['department'] === 'health_and_beauty') {
+    echo 'selected';
+}
+?>>Health and beauty</option>
+                <option value="uncategorized" <?php if (isset($_GET['department']) && $_GET['department'] === 'uncategorized') {
+    echo 'selected';
+}
+?>>Uncategorized</option>
             </select>
             <input type="submit" value="Filter">
             </form>
@@ -44,12 +71,11 @@ if (isset($_GET['department']) && $_GET['department'] !== '') {
     $sql .= " WHERE department = '$department'";
 }
 
-if(isset($_GET['submitSearch'])){
-    $search = mysqli_real_escape_string($conn,$_GET['search']);
-    if(isset($_GET['department'])){
-       $newSql = " AND (title LIKE '%$search%' OR description LIKE '%$search%')";
-    }
-    else{
+if (isset($_GET['submitSearch'])) {
+    $search = mysqli_real_escape_string($conn, $_GET['search']);
+    if (isset($_GET['department'])) {
+        $newSql = " AND (title LIKE '%$search%' OR description LIKE '%$search%')";
+    } else {
         $newSql = " WHERE title LIKE '%$search%' OR description LIKE '%$search%'";
     }
     $sql .= $newSql;
@@ -70,8 +96,9 @@ while ($row = $res->fetch_assoc()) {
     echo '<p>' . htmlspecialchars($row['description']) . '</p>';
     echo '<img src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
     echo '<p>Price: $' . htmlspecialchars($row['price']) . '</p>';
-    echo '  <form action=addCart.php method=POST>
-                <input type=submit value="Add To Cart" name='.$row['title'].'
+    echo '  <form action="../scripts/addCart.php" method="GET">
+                <input type=hidden name="cartItem" value="' . $row['ID'] . '">
+                <input type=submit value="Add To Cart" name="cartSubmit">
             </form>';
     echo '</div>';
     $count++;
@@ -82,6 +109,7 @@ while ($row = $res->fetch_assoc()) {
 if ($count % 3 != 0) {
     echo '</div>';
 }
+mysqli_close($conn);
 
 ?>
 
