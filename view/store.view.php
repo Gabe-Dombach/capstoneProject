@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../view/css/Store.css">
     </head>
     <body>
+    <h1>Joshua's Generals</h1>
     <div class = searchbar>
         <form method="GET">
             <label for="department">Browse by department:</label>
@@ -59,6 +60,7 @@
                 <input type="text" name="search" placeholder="Search">
                 <input type="submit" value="Search" name="submitSearch">
             </form>
+            <br>
         </div>
         <?php
 // Build the SQL query to retrieve the inventory items
@@ -92,14 +94,16 @@ while ($row = $res->fetch_assoc()) {
         echo '<div class="row">';
     }
     echo '<div class="item">';
-    echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
-    echo '<p>' . htmlspecialchars($row['description']) . '</p>';
-    echo '<img src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
-    echo '<p>Price: $' . htmlspecialchars($row['price']) . '</p>';
+    echo '<h2 class="title">' . htmlspecialchars($row['title']) . '</h2>';
+    echo '<p class="description">' . htmlspecialchars($row['description']) . '</p>';
+    echo '<img  class="img" src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
+    echo '<p class="price">Price: $' . htmlspecialchars($row['price']) . '</p>';
     echo '  <form action="../scripts/addCart.php" method="GET">
                 <input type=hidden name="cartItem" value="' . $row['ID'] . '">
                 <input type=submit value="Add To Cart" name="cartSubmit">
             </form>';
+    echo '<br>'; 
+    echo '<br>';
     echo '</div>';
     $count++;
     if ($count % 3 == 0) {
