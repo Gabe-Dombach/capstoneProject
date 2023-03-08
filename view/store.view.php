@@ -102,8 +102,6 @@ while ($row = $res->fetch_assoc()) {
                 <input type=hidden name="cartItem" value="' . $row['ID'] . '">
                 <input type=submit value="Add To Cart" name="cartSubmit">
             </form>';
-    echo '<br>'; 
-    echo '<br>';
     echo '</div>';
     $count++;
     if ($count % 3 == 0) {
