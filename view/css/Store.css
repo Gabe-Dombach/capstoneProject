@@ -1,15 +1,26 @@
 .img{
-    width: 40%;
+    width: 70%;
     height: 40%;
 }
 .item{
     border: 1px solid black;
-    max-width: 30%;
-    max-height: 30%;
-    padding-left: 10%;
+    max-width: 20%;
+    max-height: 20%;
+    padding-left: 5%;
+    background-color: lightgrey;
+    align-items: center;
 }
 .row{
     display: flex;
     flex-direction: row;
-    align-content: space-between;
+    padding-bottom: 5%;
+    align-content: center;
+    justify-content: space-around;
+}
+body{
+    background-color: lightcyan;
+}
+.title{
+    align-content: center;
+    justify-content: center;
 }
