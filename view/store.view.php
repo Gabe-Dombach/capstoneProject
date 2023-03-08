@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <title>Joshua's Generals</title>
 
     <?php require "navbar.view.php";?>
@@ -14,7 +15,7 @@
     <body>
     <h1>Joshua's Generals</h1>
     <div class = searchbar>
-        <form method="GET">
+        <form class="departmentForm" method="GET">
             <label for="department">Browse by department:</label>
             <select name="department" id="department">
                 <option value="" <?php if (!isset($_GET['department'])) {
@@ -54,7 +55,7 @@
 }
 ?>>Uncategorized</option>
             </select>
-            <input type="submit" value="Filter">
+            <input id="Filter" type="submit" value="Filter">
             </form>
             <form method="GET">
                 <input type="text" name="search" placeholder="Search">
@@ -94,13 +95,12 @@ while ($row = $res->fetch_assoc()) {
         echo '<div class="row">';
     }
     echo '<div class="item">';
-    echo '<h2 class="title">' . htmlspecialchars($row['title']) . '</h2>';
-    echo '<p class="description">' . htmlspecialchars($row['description']) . '</p>';
-    echo '<img  class="img" src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
-    echo '<p class="price">Price: $' . htmlspecialchars($row['price']) . '</p>';
+    echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
+    echo '<img src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
+    echo '<p>Price: $' . htmlspecialchars($row['price']) . '</p>';
     echo '  <form action="../scripts/addCart.php" method="GET">
                 <input type=hidden name="cartItem" value="' . $row['ID'] . '">
-                <input type=submit value="Add To Cart" name="cartSubmit">
+                <input type=submit value="Veiw Item" name="cartSubmit">
             </form>';
     echo '<br>'; 
     echo '<br>';
@@ -117,5 +117,6 @@ mysqli_close($conn);
 
 ?>
 
+        <script src="../scripts/store.js"></script>
     </body>
 </html>
