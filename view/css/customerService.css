@@ -1,4 +1,4 @@
-.login{
+.cs{
     border: solid black 5px;
     border-radius: 100px;
     margin-left: 35%;
@@ -6,7 +6,7 @@
     margin-top: 10%;
     background-color: lightgray;
 }
-.loginform{
+.csform{
     margin-left: 25%;
 }
 .submit{
