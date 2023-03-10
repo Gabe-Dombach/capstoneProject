@@ -1,12 +1,13 @@
 .img{
     width: 70%;
     height: 40%;
+    border: 5px solid black;
 }
 .item{
-    border: 1px solid black;
+    border: 3px solid black;
     width: 20%;
     max-height: 20%;
-    
+    border-radius: 20px;
     background-color: lightgrey;
     align-items: center;
     text-align: center;
@@ -22,6 +23,24 @@ body{
     background-color: lightcyan;
 }
 .title{
+    align-content: center;
+    text-align: center;
+}
+.imgview{
+    width: 20%;
+    height: 10%;
+    border: 5px solid black;
+}
+.btn{
+    border: 3px solid black;
+    max-width: 40%;
+    border-radius: 10px;
+    
+}
+.btn:hover{
+    background-color: lightcyan;
+}
+.header{
     align-content: center;
     text-align: center;
 }
