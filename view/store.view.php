@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../view/css/Store.css">
     </head>
     <body>
+    <div class="header">
     <h1>Joshua's Generals</h1>
     <div class = searchbar>
         <form class="departmentForm" method="GET">
@@ -63,6 +64,7 @@
             </form>
             <br>
         </div>
+</div>
         <?php
 // Build the SQL query to retrieve the inventory items
 $sql = 'SELECT * FROM inventory';
@@ -100,7 +102,7 @@ while ($row = $res->fetch_assoc()) {
     echo '<p>Price: $' . htmlspecialchars($row['price']) . '</p>';
     echo '  <form action="../scripts/addCart.php" method="GET">
                 <input type=hidden name="cartItem" value="' . $row['ID'] . '">
-                <input type=submit value="Veiw Item" name="cartSubmit">
+                <input class="btn" type=submit value="View Item" name="cartSubmit">
             </form>';
     echo '</div>';
     $count++;
