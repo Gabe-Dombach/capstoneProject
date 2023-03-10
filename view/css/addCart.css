@@ -1,0 +1,28 @@
+.img{
+    width: 60%;
+    height: 40%;
+}
+.item{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    
+    background-color: lightgrey;
+    align-items: center;
+    text-align: center;
+}
+
+html,body{
+    height: 100%;
+    background-color: lightcyan;
+        display: flex;
+    flex-direction: row;
+    /* padding-bottom: 5%; */
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.title{
+    align-content: center;
+    text-align: center;
+}
