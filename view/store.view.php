@@ -96,7 +96,7 @@ while ($row = $res->fetch_assoc()) {
     }
     echo '<div class="item">';
     echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
-    echo '<img src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
+    echo '<img class="img" src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
     echo '<p>Price: $' . htmlspecialchars($row['price']) . '</p>';
     echo '  <form action="../scripts/addCart.php" method="GET">
                 <input type=hidden name="cartItem" value="' . $row['ID'] . '">
