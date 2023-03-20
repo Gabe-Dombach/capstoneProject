@@ -21,7 +21,6 @@
                         <br>
                         <input type="submit" name="submit" class="submit">
                     </form>
-                    <p><a href="register.view.php">Click here to create account!</p>
             </div>
         </div>
     </body>
