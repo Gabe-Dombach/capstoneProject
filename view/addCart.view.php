@@ -17,7 +17,7 @@
     echo '<p>Price: $' . htmlspecialchars($row['price']) . '</p>';
     echo '  <form action=addCart.php method=POST>
                 <input type=hidden name="valueAddCart" value="' . htmlspecialchars($row['ID']).'">
-                <input type=submit value="Add To Cart" name="submitCart">
+                <input type=submit value="Add To Cart" name="submitCart" id="btn">
             </form>';
     echo '</div>';
 }

@@ -30,3 +30,6 @@
 body{
     background-color:lightsteelblue;
 }
+#message{
+    height: 20%;
+}
