@@ -59,7 +59,7 @@
             <input id="Filter" type="submit" value="Filter">
             </form>
             <form method="GET">
-                <input type="text" name="search" placeholder="Search">
+                <input type="search" name="search" placeholder="Search">
                 <input type="submit" value="Search" name="submitSearch">
             </form>
             <br>
