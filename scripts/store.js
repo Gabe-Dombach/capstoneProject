@@ -13,8 +13,8 @@ $(document).ready(function () {
     $('#department').on('change', function () {
         $('#Filter').click();
     });
-    // $('.item').on('click', function () {
-    //     let id = $(this).attr('id');
-    //     $('#' + id).children('#'.id).click();
-    // })
+    $('.item').on('click', function () {
+        let id = $(this).attr('id');
+        $('#' + id).children('#'+id).click();
+    })
 });

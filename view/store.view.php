@@ -114,8 +114,8 @@ if ($count % 3 != 0) {
     echo '</div>';
 }
 mysqli_close($conn);
-
 ?>
+
 
         <script src="../scripts/store.js"></script>
     </body>
