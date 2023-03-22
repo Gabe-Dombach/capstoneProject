@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="../pictures/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../pictures/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../pictures/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../pictures/favicon_io/site.webmanifest">
     <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -101,7 +105,9 @@ while ($row = $res->fetch_assoc()) {
     echo '<img class="img" src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
     echo '<p>Price: $' . htmlspecialchars($row['price']) . '</p>';
     echo '  <form action="../scripts/addCart.php" method="GET">
-                <input type=hidden name="cartItem" value="' . $row['ID'] . '">
+                <input type=hidden name="cartItem" value="' . htmlspecialchars($row['ID']) . '">
+                <input type=hidden name="cartItemName" value="' . htmlspecialchars($row['title']) . '">
+
                 <input class="btn" type=submit value="View Item" name="cartSubmit">
             </form>';
     echo '</div>';

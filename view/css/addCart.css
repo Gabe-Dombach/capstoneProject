@@ -1,3 +1,5 @@
+
+
 .img{
     width: 60%;
     height: 40%;
@@ -34,4 +36,32 @@ html,body{
 }
 #btn:hover{
     background-color: lightcyan;
+}
+
+.rating {
+    border: none;
+    float: left;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    content: "\f005";
+    cursor: pointer;
+}
+
+.rating label:hover:before,
+.rating label:hover ~ label:before {
+    content: "\f005";
+    color: #FFD700;
+}
+
+.rating input[type="radio"]:checked ~ label:before {
+    content: "\f005";
+    color: #FFD700;
 }
