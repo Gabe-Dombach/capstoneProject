@@ -9,9 +9,33 @@
 <link rel="manifest" href="../pictures/favicon_io/site.webmanifest">
     </head>
     <body>
+        <div class="items">
         <h2>Items</h2>
-        <div class="items"></div>
+            <div class="item">
+            <h3>Item 1 picture</h3>
+            <p>Item 1</p>
+            <p>Item 1 price</p>
+            </div>
+            <br>
+            <div class="item">
+            <h3>Item 2 picture</h3>
+            <p>Item 2</p>
+            <p>Item 2 price</p>
+            </div>
+            <br>
+            <div class="item">
+            <h3>Item 3 picture</h3>
+            <p>Item 3</p>
+            <p>Item 3 price</p>
+            </div>
+            <div class="item">
+            <h3>Item 4 picture</h3>
+            <p>Item 4</p>
+            <p>Item 4 price</p>
+            </div>
+        </div>
         <div class="paymentinfo">
+            <h2>Payment and Shipping Information</h2>
         <form method="POST">
             <input type="text" placeholder="Card Number" name="cardnum">
             <br>
@@ -31,14 +55,14 @@
             <input type="text" placeholder="Last Name" name="lname">
             <br>
             <br>
-            <input type="text" placeholder="Address" name="address">
+            <input type="text" placeholder="Billing Address" name="address">
             <br>
             <br>
             <input type="radio" name="shipping" value="1"> Regular 3-4 day delivery</radio>
             <br>
-            <input type="radio" name="shipping" value="1"> Express 1-2 day delivery(+$4.99)</radio>
+            <input type="radio" name="shipping" value="2"> Express 1-2 day delivery(+$4.99)</radio>
             <br>
-            <input type="radio" name="shipping" value="1"> Same day shipping(+$6.99)</radio>
+            <input type="radio" name="shipping" value="3"> Same day delivery(+$6.99)</radio>
             <br>
             <input type="submit" name="submit">
         </form>
