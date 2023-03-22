@@ -30,6 +30,7 @@ session_start();
 
     if(isset($_GET['cartSubmit'])){
         $item = $_GET['cartItem'];
+        $itemName = $_GET['cartItemName'];
         $conn = connect();
         $sql = "SELECT * FROM inventory WHERE ID = '$item';";
         // echo gettype($item);
