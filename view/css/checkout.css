@@ -3,14 +3,28 @@
     padding: 1%;
     display: flex;
     flex-direction: column;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: 35%;
+    margin-right: 35%;
+    background-color: #c7f3cd;
 }
 body{
-    background-color:#a2f5ad;
+    background-color:lightcyan;
     justify-content: center;
     text-align: center;
 }
 input{
     background-color: transparent;
+}
+.items{
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    margin-left: 35%;
+    margin-right: 35%;
+    border: 2px solid black;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
 }
