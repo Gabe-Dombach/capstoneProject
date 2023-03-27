@@ -6,7 +6,7 @@ if(isset($_POST['mngSub'])){
     $lname = $_POST['lname'];
     $password = $_POST['password'];
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
+$conn = connect();
 
 $sql = "SELECT * FROM users WHERE email='$email'";
 $result = mysqli_query($conn, $sql);
@@ -17,7 +17,7 @@ if ($num_rows > 0) {
     echo "This email is already registered.";
 } else {
     // Email is unique, insert the user's data into the database
-    $sql = "INSERT INTO users (email, fname, lname, pswrd, accntType) VALUES ('$email', '$fname', '$lname', '$hashed_password', '$accntType')";
+    $sql = "INSERT INTO users (email, fname, lname, pswrd, accntType) VALUES ('$email', '$fname', '$lname', '$hashed_password', 'mgr')";
     if (mysqli_query($conn, $sql)) {
         echo "Registration successful.";
     } else {
@@ -28,5 +28,5 @@ mysqli_close($conn);
     
 
 }
-
+require '../view/manager.view.php';
 ?>
