@@ -1,4 +1,4 @@
-<style>
+ <style>
 
     ul.nav {
     margin:0;
@@ -29,70 +29,43 @@ ul.nav li.current a {
 
 <?php
 
-/*
 
-if(!isset($_SESSION['level'])){
+
+if(!isset($_SESSION['user'])){
     echo '<ul class="nav">
-    <li><a href="../Scripts/index.php">Home</a></li>
-    <li><a href="../Scripts/roster.php">Staff Roster</a></li>
+    <li><a href="../scripts/store.php">Home</a></li>
+    <li><a href="../scripts/login.php">Log In</a></li>
 </ul>';
 
 }
+
 else{
-if($_SESSION['level'] == '0'){
+if($_SESSION['accntType'] == 'mgr'){
     echo '<ul class="nav">
-    <li><a href="../Scripts/index.php">Home</a></li>
-    <li><a href="../Scripts/familyHome.php">Family Home</a></li>
-    <li><a href="../Scripts/roster.php">Staff Roster</a></li>
-    <li><a href="../Scripts/logOut.php">Log Out</a></li>
+    <li><a href="../scripts/store.php">Home</a></li>
+    <li><a href="../scripts/managment.php">managment home</a></li>
+    <li><a href="../scripts/logout.php">Log Out</a></li>
 </ul>';
 }
-else if($_SESSION['level'] == '1'){
+else if($_SESSION['accntType'] == 'usr'){
     echo '<ul class="nav">
-    <li><a href="../Scripts/index.php">Home</a></li>
-    <li><a href="../Scripts/patientHomeHome.php">Patient Home</a></li>
-    <li><a href="../Scripts/roster.php">Staff Roster</a></li>
-    <li><a href="../Scripts/logOut.php">Log Out</a></li>
+    <li><a href="../scripts/store.php">Home</a></li>
+    <li><a href="../scripts/cart.php">my cart</a></li>
+    <li><a href="../scripts/logout.php">Log Out</a></li>
 </ul>';
 }
-else if($_SESSION['level'] == '2'){
+else if($_SESSION['accntType'] == 'slr'){
     echo '<ul class="nav">
-    <li><a href="../Scripts/index.php">Home</a></li>
-    <li><a href="../Scripts/patients.php">Patient\'s</a></li>
-    <li><a href="../Scripts/caregiverHome.php">Caregiver\'s Home</a></li>
-    <li><a href="../Scripts/roster.php">Staff Roster</a></li>
-    <li><a href="../Scripts/logOut.php">Log Out</a></li>
+    <li><a href="../scripts/store.php">Home</a></li>
+    <li><a href="../scripts/seller.php">Seller Home</a></li>
+    <li><a href="../scripts/cart.php">my cart</a></li>
+    <li><a href="../scripts/logout.php">Log Out</a></li>
 </ul>';
 
-}
-else if($_SESSION['level'] == '3'){
-    echo '<ul class="nav">
-    <li><a href="../Scripts/index.php">Home</a></li>
-    <li><a href="../Scripts/patients.php">Patient\'s</a></li>
-    <li><a href="../Scripts/doctorHome.php">Doctor\'s Home</a></li>
-    <li><a href="../Scripts/PatientofDoctor.php">Doctor\'s Patients</a></li>
-    <li><a href="../Scripts/roster.php">Staff Roster</a></li>
-    <li><a href="../Scripts/logOut.php">Log Out</a></li>
-</ul>';
-}
-else if($_SESSION['level'] == '4'){
-    echo '<ul class="nav">
-    <li><a href="../Scripts/index.php">Home</a></li>
-    <li><a href="../Scripts/patients.php">Patient\'s</a></li>
-    <li><a href="../Scripts/adminReport.php">Admin\'s Report</a></li>
-    <li><a href="../Scripts/aditionalInfo.php">Patient Aditional Info</a></li>
-    <li><a href="../Scripts/DoctorsApointments.php">Doctor\'s Appointment\'s</a></li>
-    <li><a href="../Scripts/role.php">Roles</a></li>
-    <li><a href="../Scripts/regcheck.php">Registration Aproval</a></li>
-    <li><a href="../Scripts/PatientofDoctor.php">Doctor\'s Patients</a></li>
-    <li><a href="../Scripts/newRoster.php">New Staff Roster</a></li>
-    <li><a href="../Scripts/roster.php">Staff Roster</a></li>
-    <li><a href="../Scripts/payment.php">Payments</a></li>
-    <li><a href="../Scripts/logOut.php">Log Out</a></li>
-</ul>';
+
 
 }}
 
-*/
+
 
 ?>

@@ -11,6 +11,8 @@
     <title>Document</title>
 </head>
 <body>
+        <?php require "navbar.view.php";?>
+
     <div>
         <form action="../scripts/seller.php" method="POST" enctype="multipart/form-data">
             <input type = text placeholder="Title Here" name=title >

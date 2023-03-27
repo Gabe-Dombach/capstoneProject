@@ -40,7 +40,7 @@ html,body{
 
 .rating {
     border: none;
-    float: left;
+    float: right;
 }
 
 .rating input[type="radio"] {
