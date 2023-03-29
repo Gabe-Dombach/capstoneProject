@@ -26,6 +26,8 @@
             $item = $row['ID'];
         echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
         echo '<p>' . htmlspecialchars($row['description']) . '</p>';
+        echo "<p>" . htmlspecialchars($ratingAVG) . "/5 Stars</p>";
+
         echo '<img class="img" src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
         echo '<p>Price: $' . htmlspecialchars($row['price']) . '</p>';
         echo '<form action=addCart.php method=POST>

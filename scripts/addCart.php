@@ -39,10 +39,22 @@ session_start();
         $res = mysqli_query($conn, $sql);
         $sql = "SELECT * FROM reveiws WHERE prodID = '$item';"; // fetch all reveiws for the item to be used on the veiw page
         $reveiwRes = mysqli_query($conn, $sql);
+        $sqk = "SELECT AVG(rating) as avgRating FROM reveiws WHERE prodID = '$item'"; 
 
+        $avgRatingRes = mysqli_query($conn, $sqk);
+        $ratingData = mysqli_fetch_assoc($avgRatingRes);
+        if(empty($ratingData['avgRating'])){
+            $ratingAVG = 0;
+        
+        }else{
+            print_r($ratingData);
+         $ratingAVG = $ratingData['avgRating'][0];
+   
+
+        }
         mysqli_close($conn);
 
-
+        
 
     }
     else{
@@ -64,7 +76,6 @@ session_start();
         $res = mysqli_query($conn, $sql);
         mysqli_close($conn);
         echo "Reveiw Added Successfully";
-        header("Location:addCart.php?cartItem=$item&cartSubmit=View+Item");
     }
 
 require "../view/addCart.view.php";
