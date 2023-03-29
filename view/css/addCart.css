@@ -42,7 +42,8 @@ html,body{
 
 .rating {
     border: none;
-
+display: flex;
+flex-direction: row-reverse;
     float: right;
 
 }
@@ -59,7 +60,7 @@ html,body{
     cursor: pointer;
 }
 
-.rating label:hover:before,
+.rating label:hover::before,
 .rating label:hover ~ label:before {
     content: "\f005";
     color: #FFD700;
