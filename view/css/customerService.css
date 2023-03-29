@@ -8,6 +8,7 @@
 }
 .csform{
     margin-left: 25%;
+    padding: 3%;
 }
 .submit{
     margin-left: 20%;
@@ -28,7 +29,7 @@
     text-align: center;
 }
 body{
-    background-color:lightsteelblue;
+    background-color:lightcyan;
 }
 #message{
     height: 20%;

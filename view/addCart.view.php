@@ -16,10 +16,8 @@
     <title>Joshuas' General's: <?php echo($itemName);?></title>
 </head>
 <body>
-
+    <div class="navbar">
         <?php require "navbar.view.php";?>
-
-
     <div class="item">
     <?php 
         while ($row = $res->fetch_assoc()) { // fetch the requested item from the database and display it
@@ -77,7 +75,7 @@
             </div>
     </section>
     </div>
-
+    </div>
     <script src="../scripts/addCart.js"></script>
 </body>
 </html>
