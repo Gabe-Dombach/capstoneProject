@@ -43,7 +43,7 @@ else{
 if($_SESSION['accntType'] == 'mgr'){
     echo '<ul class="nav">
     <li><a href="../scripts/store.php">Home</a></li>
-    <li><a href="../scripts/managment.php">managment home</a></li>
+    <li><a href="../scripts/manager.php">managment home</a></li>
     <li><a href="../scripts/logout.php">Log Out</a></li>
 </ul>';
 }
