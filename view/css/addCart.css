@@ -42,7 +42,9 @@ html,body{
 
 .rating {
     border: none;
+
     float: right;
+
 }
 
 .rating input[type="radio"] {

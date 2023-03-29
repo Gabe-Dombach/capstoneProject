@@ -9,14 +9,15 @@
 <link rel="icon" type="image/png" sizes="16x16" href="../pictures/favicon_io/favicon-16x16.png">
 <link rel="manifest" href="../pictures/favicon_io/site.webmanifest">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
     <script src="https://kit.fontawesome.com/ed0b57e2ff.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="../view/css/addCart.css">
     <title>Joshuas' General's: <?php echo($itemName);?></title>
 </head>
 <body>
     <div class="navbar">
         <?php require "navbar.view.php";?>
-    
     <div class="item">
     <?php 
         while ($row = $res->fetch_assoc()) { // fetch the requested item from the database and display it
@@ -53,11 +54,13 @@
 
                     <fieldset class="rating">
                         <legend>Please rate:</legend>
-                        <input type="radio" id="star1" name="reveiwRating" value="1" /><label  for="star1" title="1 star"></label>
+
+                        <input type="radio" id="star1" name="reveiwRating" value="1" /><label for="star1" title="1 star"></label>
                         <input type="radio" id="star2" name="reveiwRating" value="2" /><label for="star2" title="2 stars"></label>
                         <input type="radio" id="star3" name="reveiwRating" value="3" /><label for="star3" title="3 stars"></label>
                         <input type="radio" id="star4" name="reveiwRating" value="4" /><label for="star4" title="4 stars"></label>
                         <input type="radio" id="star5" name="reveiwRating" value="5" /><label for="star5" title="5 stars"></label>
+
 
                     </fieldset>
 

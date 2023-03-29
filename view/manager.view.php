@@ -5,6 +5,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="../pictures/favicon_io/favicon-16x16.png">
 <link rel="manifest" href="../pictures/favicon_io/site.webmanifest">
     </head>
+
+
     <body>
             <?php require "navbar.view.php";?>
         <form action="../scripts/manager.php" method="POST">
@@ -15,5 +17,17 @@
             <input type="submit" name="mngSub" value="add manager">
         </form>
         
+
+
+
+
+
+
+
+    <?php 
+                  
+    ?>
+
+
     </body>
 </html>

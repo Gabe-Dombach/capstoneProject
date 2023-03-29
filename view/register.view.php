@@ -9,6 +9,7 @@
     <title>Register</title>
     </head>
     <body>
+
             <?php require "navbar.view.php";?>
 
         <div class="register">
