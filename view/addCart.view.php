@@ -24,6 +24,8 @@
             $item = $row['ID'];
         echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
         echo '<p>' . htmlspecialchars($row['description']) . '</p>';
+        echo "<p>" . htmlspecialchars($ratingAVG) . "/5 Stars</p>";
+
         echo '<img class="img" src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
         echo '<p>Price: $' . htmlspecialchars($row['price']) . '</p>';
         echo '<form action=addCart.php method=POST>
@@ -57,7 +59,7 @@
 
                         <input type="radio" id="star1" name="reveiwRating" value="1" /><label for="star1" title="1 star"></label>
                         <input type="radio" id="star2" name="reveiwRating" value="2" /><label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="reveiwRating" value="3" /><label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star3" name="reveiwRating" value="3" checked /><label for="star3" title="3 stars"></label>
                         <input type="radio" id="star4" name="reveiwRating" value="4" /><label for="star4" title="4 stars"></label>
                         <input type="radio" id="star5" name="reveiwRating" value="5" /><label for="star5" title="5 stars"></label>
 
