@@ -5,8 +5,10 @@
 function connect(){
 $servername = "localhost";
 $username = "root";
-$password = "cset2023";
-$dbname = "joshuasgenerals";
+
+$password = "";
+$dbname = "postgres";
+
     return new mysqli($servername, $username, $password, $dbname);
 
 }
@@ -46,9 +48,18 @@ $sql =
         prodID BIGINT NOT NULL,
         descript VARCHAR(200),
         rating int CHECK (rating BETWEEN 1 AND 5));
+
+    
     CREATE TABLE IF NOT EXISTS carts(
         custID BIGINT,
-        itemID BIGINT);";
+        itemID BIGINT);
+
+CREATE TABLE IF NOT EXISTS supportcomments(
+    name  VARCHAR(50),
+    email VARCHAR(100)
+    phoneNumber VARCHAR(50),
+    Comment VARCHAR(1000),
+    ";
 
 
 ?>

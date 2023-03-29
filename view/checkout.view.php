@@ -9,7 +9,9 @@
 <link rel="manifest" href="../pictures/favicon_io/site.webmanifest">
     </head>
     <body>
+
             <?php require "navbar.view.php";?>
+
 
         <div class="items">
         <h2>Items</h2>
