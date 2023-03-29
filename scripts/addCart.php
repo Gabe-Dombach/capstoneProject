@@ -30,7 +30,7 @@ session_start();
 
     if(isset($_GET['cartSubmit'])){
         $item = $_GET['cartItem'];
-        $itemName = $_GET['cartItemName'];
+        // $itemName = $_GET['cartItemName'];
         $conn = connect();
         $sql = "SELECT * FROM inventory WHERE ID = '$item';";
         // echo gettype($item);
@@ -47,7 +47,7 @@ session_start();
             $ratingAVG = 0;
         
         }else{
-            print_r($ratingData);
+            // print_r($ratingData);
          $ratingAVG = $ratingData['avgRating'][0];
    
 
@@ -76,6 +76,8 @@ session_start();
         $res = mysqli_query($conn, $sql);
         mysqli_close($conn);
         echo "Reveiw Added Successfully";
+        header("Location:addCart.php?cartItem=$item&cartSubmit=View+Item");
+
     }
 
 require "../view/addCart.view.php";
