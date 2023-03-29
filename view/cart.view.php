@@ -6,6 +6,8 @@
 <link rel="manifest" href="../pictures/favicon_io/site.webmanifest">
     </head>
     <body>
+            <?php require "navbar.view.php";?>
+
         
     </body>
 </html>

@@ -5,8 +5,10 @@
 function connect(){
 $servername = "localhost";
 $username = "root";
+
 $password = "";
 $dbname = "postgres";
+
     return new mysqli($servername, $username, $password, $dbname);
 
 }
@@ -46,6 +48,7 @@ $sql =
         prodID BIGINT NOT NULL,
         descript VARCHAR(200),
         rating int CHECK (rating BETWEEN 1 AND 5));
+
     
     CREATE TABLE IF NOT EXISTS carts(
         custID BIGINT,
@@ -57,5 +60,6 @@ CREATE TABLE IF NOT EXISTS supportcomments(
     phoneNumber VARCHAR(50),
     Comment VARCHAR(1000),
     ";
+
 
 ?>

@@ -4,6 +4,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../pictures/favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../pictures/favicon_io/favicon-16x16.png">
 <link rel="manifest" href="../pictures/favicon_io/site.webmanifest">
+
     <link rel="stylesheet" href="../view/css/customerService.css" />
     </head>
     <body>
@@ -25,11 +26,14 @@
                         <input type="text" placeholder="Email" name="email" class="input">
                         <br>
                         <br>
+
                         <input type="text" class="input" placeholder="Write your message here" id="message" name="message">
+
                         <br>
                         <br>
                         <input type="submit" name="submit" class="submit">
                     </form>
+
 
                     <?php 
                     
@@ -81,6 +85,7 @@
 
 }
                     ?>
+
             </div>
         </div>
     </body>

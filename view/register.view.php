@@ -9,6 +9,9 @@
     <title>Register</title>
     </head>
     <body>
+
+            <?php require "navbar.view.php";?>
+
         <div class="register">
             <div class="registerform">
                 <div class="title"><h1>Create an account!</h1></div>

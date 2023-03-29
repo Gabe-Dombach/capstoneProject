@@ -8,6 +8,14 @@
 
 
     <body>
+            <?php require "navbar.view.php";?>
+        <form action="../scripts/manager.php" method="POST">
+            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="fname" placeholder="First Name">
+            <input type="text" name="lname" placeholder="Last Name">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" name="mngSub" value="add manager">
+        </form>
         
 
 
