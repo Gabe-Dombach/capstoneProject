@@ -24,6 +24,8 @@
             $item = $row['ID'];
         echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
         echo '<p>' . htmlspecialchars($row['description']) . '</p>';
+        echo "<p>" . htmlspecialchars($ratingAVG) . "/5 Stars</p>";
+
         echo '<img class="img" src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
         echo '<p>Price: $' . htmlspecialchars($row['price']) . '</p>';
         echo '<form action=addCart.php method=POST>
@@ -54,6 +56,7 @@
 
                     <fieldset class="rating">
                         <legend>Please rate:</legend>
+
 
                         <input type="radio" id="star5" name="reveiwRating" value="5" /><label for="star5" title="5 star"></label>
                         <input type="radio" id="star4" name="reveiwRating" value="4" /><label for="star4" title="4 stars"></label>
