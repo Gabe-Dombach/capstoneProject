@@ -1,4 +1,5 @@
 <?php 
+session_start();
 if(isset($_POST['mngSub'])){
     require "database.php";
     $email = $_POST['email'];
