@@ -1,0 +1,9 @@
+#comments{
+    overflow-y: scroll;
+
+    width: 50%;
+    height: 50%;
+
+
+    flex-wrap: wrap;
+  }
