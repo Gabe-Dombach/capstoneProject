@@ -4,7 +4,20 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   margin-top: 50px;
+}
+
+input {
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  text-align: center;
 }
 
 input[type="text"],
@@ -16,6 +29,7 @@ select {
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
+
 }
 
 /* style file input */
