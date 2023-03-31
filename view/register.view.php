@@ -34,7 +34,7 @@
                         </select>
                         <input type="submit" name="register" class="submit">
                     </form>
-                    <p class="link"><a href="login.view.php">Already have an account? Log in here!</p>
+                    <p class="link"><a href="login.php">Already have an account? Log in here!</p>
             </div>
         </div>
     </body>
