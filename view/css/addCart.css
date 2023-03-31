@@ -44,7 +44,6 @@ html,body{
     border: none;
 display: flex;
 flex-direction: row-reverse;
-    float: right;
 
 }
 
