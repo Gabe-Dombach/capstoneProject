@@ -55,7 +55,7 @@
                 <form action="../scripts/addCart.php"method="POST">
 
                     <fieldset class="rating">
-                        <legend>Please rate:</legend>
+                        <legend class="legend">Please rate:</legend>
 
 
                         <input type="radio" id="star5" name="reveiwRating" value="5" /><label for="star5" title="5 stars"></label>
