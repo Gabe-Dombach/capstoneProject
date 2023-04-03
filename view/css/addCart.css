@@ -44,6 +44,7 @@ html,body{
     border: none;
 display: flex;
 flex-direction: row-reverse;
+padding-right: 20%;
 
 }
 
@@ -68,4 +69,7 @@ flex-direction: row-reverse;
 .rating input[type="radio"]:checked ~ label:before {
     content: "\f005";
     color: #FFD700;
+}
+.legend{
+    padding-left: 20%;
 }
