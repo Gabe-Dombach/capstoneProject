@@ -29,6 +29,15 @@ if (isset($_POST['login'])) {
                 $_SESSION['ID'] = $data['ID'];
                 $_SESSION['accntType'] = $data['accntType'];
                 $_SESSION['LAST_ACTIVITY'] = time();
+                if(isset($_GET['purl'])){
+                    $url = $_GET['purl'];
+                    if(strpos($url,"addCart.php")!== false){
+                    $url .= "&cartSubmit=View Item";}
+             
+                    
+                    header('Location:'.$url);
+                }
+                else{
                 switch ($data['accntType']) {
                     case 'mgr':
                         mysqli_stmt_close($stmt);
@@ -48,7 +57,7 @@ if (isset($_POST['login'])) {
                     default:
                         header("Location: login.php?error=3");
                         exit();
-                }
+                }}
             } else {
                 header("Location: login.php?error=3");
                 exit();

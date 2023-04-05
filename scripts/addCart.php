@@ -6,15 +6,27 @@ session_start();
     $reveiwRes=false;
 
     $id = null;
-    if(!isset($_SESSION['ID'])){
-        header("Location: login.php?error=please login to veiw items");
-    }
-    else{
-        $id = $_SESSION['ID'];
-    }
-    if(isset($_POST['submitCart'])){
+ 
 
+    if(isset($_POST['submitCart'])){
         $item = $_POST['valueAddCart'];
+
+        if(!isset($_SESSION['ID'])){
+                if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+                    $url = "https://";
+        }       else {
+                    $url = "http://";
+        }
+
+// Append the host(domain name, ip) to the URL.
+        $url .= $_SERVER['HTTP_HOST'];
+
+        // Append the requested resource location to the URL
+        $url .= $_SERVER['REQUEST_URI'];
+        $url.="?cartItem=$item&cartSubmit=View+Item";
+        header("Location: login.php?error=please login to add  items to cart&purl=$url");}
+
+        
         // echo $item;
         // exit();
         $id = $_SESSION['ID'];
