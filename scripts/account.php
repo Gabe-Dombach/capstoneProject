@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
             }
     }
-
+    // handle password change request
     if(isset($_POST["changePassword"])){
         $sql = "SELECT pswrd FROM users WHERE ID = $id";
         $conn = connect();
@@ -99,6 +99,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     }
+
+
 }
 
 // Close database connection
