@@ -39,21 +39,29 @@ if (!isset($_SESSION['user'])) {
 } else {
     if ($_SESSION['accntType'] == 'mgr') {
         echo '<ul class="nav">
+        <li><a href="../scripts/account.php">My Account </a></li>
+
     <li><a href="../scripts/store.php">Home</a></li>
-    <li><a href="../scripts/manager.php">managment home</a></li>
+    <li><a href="../scripts/manager.php">Managment home</a></li>
     <li><a href="../scripts/logout.php" ID="logout">Log Out</a></li>
 </ul>';
     } else if ($_SESSION['accntType'] == 'usr') {
         echo '<ul class="nav">
+                <li><a href="../scripts/account.php">My Account </a></li>
+
     <li><a href="../scripts/store.php">Home</a></li>
-    <li><a href="../scripts/cart.php">my cart</a></li>
+    <li><a href="../scripts/cart.php">My Cart</a></li>
+
     <li><a href="../scripts/logout.php" ID="logout">Log Out</a></li>
 </ul>';
     } else if ($_SESSION['accntType'] == 'slr') {
         echo '<ul class="nav">
+                <li><a href="../scripts/account.php">My Account </a></li>
+
     <li><a href="../scripts/store.php">Home</a></li>
     <li><a href="../scripts/seller.php">Seller Home</a></li>
-    <li><a href="../scripts/cart.php">my cart</a></li>
+    <li><a href="../scripts/cart.php">My Cart</a></li>
+
     <li><a href="../scripts/logout.php" ID="logout">Log Out</a></li>
 </ul>';
 

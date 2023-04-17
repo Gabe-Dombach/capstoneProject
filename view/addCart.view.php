@@ -68,7 +68,7 @@
                     </fieldset>
 
                     <label for=reveiwData id="charCount"></label>
-                    <textarea class='no-outline' id="reveiwData" name="reveiwData" maxlength="200"></textarea>
+                    <textarea style="resize: none;" class='no-outline' id="reveiwData" name="reveiwData" rows="5" cols="40" maxlength="200"></textarea>
                     
                     <input type="hidden" name="itemID" value="<?php echo $item;?>">
                     <input type="hidden" name="usrID" value="<?php echo$id;?>">

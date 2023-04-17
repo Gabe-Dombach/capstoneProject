@@ -40,14 +40,15 @@ require_once "../view/account.view.php";
 
 // Process form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     // handle card Removal Request
     if(isset($_POST["cardRemoval"])){
         // echo $_POST["csrf_token"]."<br/>SESSION:".$_SESSION["csrf_token"]; //testing to make sure validation is working
         // Verify CSRF token
-        if (!isset($_POST["csrf_token"]) || $_POST["csrf_token"] !== $_SESSION["csrf_token"]) {
-            // CSRF token verification failed - handle the error
-            exit();
-        }
+        // if (!isset($_POST["csrf_token"]) || $_POST["csrf_token"] !== $_SESSION["csrf_token"]) {
+        //     // CSRF token verification failed - handle the error
+        //     die("verification failed");
+        // }
 
         // Loop through all submitted card numbers
         foreach ($_POST['cards'] as $card_num) {
@@ -60,10 +61,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $stmt->execute();
                 $stmt->close();
                 unset($_SESSION["csrf_token"]);
-                echo "<script>location.reload();</script>";
+                // echo "<script>location.reload();</script>";
+                // exit();
             }
             }
     }
+
     // handle password change request
     if(isset($_POST["changePassword"])){
         $sql = "SELECT pswrd FROM users WHERE ID = $id";
@@ -99,6 +102,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     }
+        //handle card addition request
+    if(isset($_POST["newCard"])){
+
+        $crdNum =$_POST["cardNm"];
+        $secCode = $_POST["secCode"];
+        $d = strtotime(($_POST["expMnth"]."/25/".$_POST["expYear"]));
+        $d = date("Y-m-d", $d) . "<br>";
+        // exit;
+        if (strlen($secCode) > 3 ){
+            die("Invalid Security Code");
+        };
+        if(strlen($crdNum ) > 16 || strlen($crdNum) < 15){
+            die("Invalid Card Number");
+        }
+
+        // $date = date_create($d);
+        // echo date_format($date,"Y/m/d");
+        // exit();
+
+        $sql = "INSERT INTO cards VALUES
+                (?,?,?,?);";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssss", $id,$crdNum,$secCode,$d);
+        $stmt->execute();
+        $stmt->close();
+        echo "insertion sucessfull";
+
+
+    }
+
 
 
 }
