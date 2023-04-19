@@ -8,6 +8,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="../pictures/favicon_io/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../pictures/favicon_io/favicon-16x16.png">
         <link rel="manifest" href="../pictures/favicon_io/site.webmanifest">
+        <link rel="stylesheet" href="../view/css/account.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         <title>My Account Home</title>
     </head>
@@ -26,6 +27,7 @@
             </form>
         </section>
         <section class="cardForm">
+            <h3 >Add A Card</h3>
             <form action="../scripts/account.php" method="POST">
                 <input type="hidden" name="ID" value="<?php echo $usrID;?>">
                 <input type="number" name="cardNm" placeholder="enter Card Number">
@@ -65,6 +67,7 @@
 
 
         <section class="showCards">
+            <h3>Remove A Card</h3>
 <form action="../scripts/account.php" method="post">
     <input type="hidden" name="csrf_token" value="<?=$token;?>">
 
