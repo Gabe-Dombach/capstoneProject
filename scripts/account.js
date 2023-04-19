@@ -1,23 +1,33 @@
 $(document).ready(function () {
-    $('#deleteCards').click(function () {
-        var selectedCards = $('input[type="checkbox"]:checked')
-            .map(function () {
-                return $(this).val();
-            })
-            .get()
-            .join(',');
+    $('input[type="submit"]').prop('disabled', true);
 
-        $.ajax({
-            type: 'POST',
-            url: '../scripts/account.php',
-            data: { selectedCards: selectedCards },
-            success: function () {
-                $('input[type="checkbox"]:checked').closest('li').remove();
-            },
-            error: function () {
-                alert('Error deleting cards');
-            },
+    $('.cardVals').keyup(function () {
+        var allFilled = true;
+        $('.cardVals').each(function () {
+            if (
+                $(this).val() == '' ||
+                $('#addYY').val() == 'NOT_SET' ||
+                $('#addMM').val() == 'NOT_SET'
+            ) {
+                allFilled = false;
+            }
         });
+        $('#newCardSubmit').prop('disabled', !allFilled);
     });
-});
 
+    $('.passField').keyup(function () {
+        var allFilled = true;
+        $('.passField').each(function () {
+            if ($(this).val() == '') {
+                allFilled = false;
+            }
+        });
+        $('#passFieldSubmit').prop('disabled', !allFilled);
+    });
+
+    // check if there are any li elements in the ul inside the section
+    if ($('.showCards ul li').length === 0) {
+        // console.log("hiding cards");
+        $('.showCards').hide(); // hide the section if there are no li elements
+    }
+});
