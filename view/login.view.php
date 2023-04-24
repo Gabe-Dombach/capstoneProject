@@ -23,7 +23,7 @@
                         <br>
                         <input type="submit" name="login" class="submit">
                     </form>
-                    <p><a href="register.view.php">Click here to create account!</p>
+                    <p><a href="../view/register.view.php">Click here to create account!</p>
             </div>
         </div>
     </body>

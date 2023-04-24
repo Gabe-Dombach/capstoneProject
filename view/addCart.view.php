@@ -13,23 +13,25 @@
     <script src="https://kit.fontawesome.com/ed0b57e2ff.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../view/css/addCart.css">
-    <title>Joshuas' General's</title>
+    <title>Joshuas' General's: <?php echo($itemName);?></title>
 </head>
 <body>
-    <div class="navbar">
+
         <?php require "navbar.view.php";?>
+
+
     <div class="item">
     <?php 
         while ($row = $res->fetch_assoc()) { // fetch the requested item from the database and display it
             $item = $row['ID'];
         echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
         echo '<p>' . htmlspecialchars($row['description']) . '</p>';
-        echo "<p>" . htmlspecialchars($ratingAVG) . "/5 Stars</p>";
-
         echo '<img class="img" src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
         echo '<p>Price: $' . htmlspecialchars($row['price']) . '</p>';
         echo '<form action=addCart.php method=POST>
                     <input type=hidden name="valueAddCart" value="' . htmlspecialchars($row['ID']).'">
+                    <p> enter an amount of product below </p> 
+                    <input type="number" id="quantity" name="quantity" min="1" max="100" placeholder="1-100" value="1"> <br> <br>
                     <input type=submit value="Add To Cart" name="submitCart" id="btn">
              </form>';
         }
@@ -57,12 +59,11 @@
                     <fieldset class="rating">
                         <legend class="legend">Please rate:</legend>
 
-
-                        <input type="radio" id="star5" name="reveiwRating" value="5" /><label for="star5" title="5 stars"></label>
-                        <input type="radio" id="star4" name="reveiwRating" value="4" /><label for="star4" title="4 stars"></label>
-                        <input type="radio" id="star3" name="reveiwRating" value="3" /><label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star2" name="reveiwRating" value="2" /><label for="star2" title="2 stars"></label>
                         <input type="radio" id="star1" name="reveiwRating" value="1" /><label for="star1" title="1 star"></label>
+                        <input type="radio" id="star2" name="reveiwRating" value="2" /><label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star3" name="reveiwRating" value="3" /><label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star4" name="reveiwRating" value="4" /><label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star5" name="reveiwRating" value="5" /><label for="star5" title="5 stars"></label>
 
 
                     </fieldset>
@@ -78,7 +79,7 @@
             </div>
     </section>
     </div>
-    </div>
+
     <script src="../scripts/addCart.js"></script>
 </body>
 </html>

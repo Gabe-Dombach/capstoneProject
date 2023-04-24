@@ -1,36 +1,32 @@
-.login {
-  border: 5px solid black;
-  border-radius: 100px;
-  margin: 10% 35% 0 35%;
-  background-color: lightgray;
+.login{
+    border: solid black 5px;
+    border-radius: 100px;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10%;
+    background-color: lightgray;
 }
-
-.loginform {
-  margin-left: 25%;
+.loginform{
+    margin-left: 25%;
 }
-
-.submit {
-  margin-left: 20%;
-  border: 2px solid black;
-  border-radius: 5px;
-  background-color: lightcyan;
+.submit{
+    margin-left: 20%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightcyan;
 }
-
-.submit:hover {
-  background-color: lightgreen;
+.submit:hover{
+    background-color: lightgreen;
 }
-
-.title {
-  margin-left: -7%;
+.title{
+    margin-left: -7%;
 }
-
-.input {
-  border: 2px solid black;
-  border-radius: 5px;
-  background-color: lightcyan;
-  text-align: center;
+.input{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightcyan;
+    text-align: center;
 }
-
-body {
-  background-color: lightsteelblue;
+body{
+    background-color:lightsteelblue;
 }

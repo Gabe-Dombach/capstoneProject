@@ -1,6 +1,7 @@
 
 
 .img{
+
     width: 350px;
     height: 250px;
     
@@ -14,6 +15,7 @@
     height: fit-content;
     margin-top: 3%;
     background-color: white;
+
     align-items: center;
     text-align: center;
 }
@@ -21,7 +23,7 @@
 html,body{
     height: 100%;
     background-color: lightcyan;
-    display: flex;
+        display: flex;
     flex-direction: row;
     /* padding-bottom: 5%; */
     align-content: center;
@@ -34,7 +36,7 @@ html,body{
 }
 #btn{
     border: 3px solid black;
-    max-width: 45%;
+    max-width: 40%;
     border-radius: 10px;
 }
 #btn:hover{
@@ -43,9 +45,11 @@ html,body{
 
 .rating {
     border: none;
+
 display: flex;
 flex-direction: row-reverse;
 padding-right: 27%;
+
 
 }
 
@@ -61,7 +65,7 @@ padding-right: 27%;
     cursor: pointer;
 }
 
-.rating label:hover::before,
+.rating label:hover:before,
 .rating label:hover ~ label:before {
     content: "\f005";
     color: #FFD700;
