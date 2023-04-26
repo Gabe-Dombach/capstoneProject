@@ -1,0 +1,47 @@
+.register{
+    border: solid black 5px;
+    border-radius: 100px;
+    margin-left: 35%;
+    margin-right: 35%;
+    justify-content: center;
+    margin-top: 10%;
+    background-color: lightgray;
+}
+.registerform{
+    margin-left: 25%;
+}
+.submit{
+    margin-left: 20%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightcyan;
+}
+.submit:hover{
+    background-color: lightgreen;
+}
+.title{
+    margin-left: -7%;
+}
+.input{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightcyan;
+    text-align: center;
+}
+body{
+        margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+box-sizing: border-box;
+    background-color:lightsteelblue;
+}
+header {
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: space-between;
+padding: 1rem;
+}
+.link{
+    margin-left: -10%;
+}
