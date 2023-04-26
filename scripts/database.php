@@ -15,7 +15,6 @@ $dbname = "joshuasgenerals";
 
 
 
-
 $sql = 
     "CREATE TABLE IF NOT EXISTS users (
         ID BIGINT AUTO_INCREMENT  PRIMARY KEY,
@@ -28,7 +27,7 @@ $sql =
         ID BIGINT,
         crdNum VARCHAR(19),
         srtyCode VARCHAR(4),
-        expDate VARCHAR(8),
+        expDate DATE,
         FOREIGN KEY (ID) REFERENCES users(id)
     );
 
