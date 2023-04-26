@@ -32,7 +32,7 @@ echo '<div class="row">';
 }
 echo '<div class="item">';
 echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
-echo '<p>Price: $' . htmlspecialchars($row['price'] * $row['quantity']) . '</p>';
+echo '<p>Price: $' . htmlspecialchars($row['']) . '</p>';
 
 $count++;
 if ($count % 3 == 0) {
@@ -40,6 +40,10 @@ echo '</div>';
 }
 
 }
+
+echo '<div class="item">';
+echo '<p>Price: $' . htmlspecialchars($row['SELECT * FROM carts INNER JOIN inventory WHERE carts.itemID = inventory.ID  AS total ']) . '</p>';
+echo '</div>';
 
 
 

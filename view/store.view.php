@@ -12,11 +12,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <title>Joshua's Generals</title>
 
-    <?php require "navbar.view.php";?>
 
     <link rel="stylesheet" href="../view/css/Store.css">
     </head>
     <body>
+    <header>
+        <?php require "navbar.view.php";?>
+    </header>
     <div class="header">
     <h1>Joshua's Generals</h1>
     <div class = searchbar>
@@ -107,7 +109,6 @@ while ($row = $res->fetch_assoc()) {
     echo '  <form action="../scripts/addCart.php" method="GET">
                 <input type=hidden name="cartItem" value="' . htmlspecialchars($row['ID']) . '">
                 <input type=hidden name="cartItemName" value="' . htmlspecialchars($row['title']) . '">
-                
 
                 <input class="btn" type=submit value="View Item" name="cartSubmit">
             </form>';

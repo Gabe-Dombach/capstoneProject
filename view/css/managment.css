@@ -1,5 +1,3 @@
-/* form styling */
-
 /* Header styles */
 header {
 background-color: #333;
@@ -37,19 +35,35 @@ nav ul li a:hover {
 text-decoration: underline;
 }
 
-
-
-
+.img{
+    width: 70%;
+    height: 40%;
+    /* border: 5px solid black; */
+}
+.item{
+    border: 3px solid black;
+    width: 30%;
+    /* max-height: 20%; */
+    height: 450px;
+    border-radius: 20px;
+    background-color: white;
+    align-items: center;
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 3%;
+    height: 20%;
+    align-content: center;
+    justify-content: space-evenly;
+}
 body{
     margin: 0;
 padding: 0;
 font-family: Arial, sans-serif;
 box-sizing: border-box;
     background-color: lightcyan;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-flow: column;
 }
 .title{
     align-content: center;
@@ -73,7 +87,15 @@ box-sizing: border-box;
     align-content: center;
     text-align: center;
 }
+#comments{
+    overflow-y: scroll;
 
+    width: 50%;
+    height: 50%;
+
+
+    flex-wrap: wrap;
+  }
 
 input[type=submit]:disabled  {
     pointer-events: none;
@@ -82,24 +104,24 @@ input[type=submit]:disabled  {
 
 }
 /* Password form styles */
-.sellerForm {
+.addManager {
     width:40%;
 margin-top: 2rem;
-margin-left:20%;
+margin-left:30%;
 }
 
-.sellerForm form {
+.addManager form {
 display: flex;
 flex-direction: column;
 align-items: center;
 }
 
-.sellerForm h3 {
+.addManager h3 {
 font-size: 1.5rem;
 margin-bottom: 1rem;
 }
 
-.sellerForm input[type=password] {
+.addManager input[type=password] {
 padding: 0.5rem;
 margin-bottom: 1rem;
 border-radius: 0.5rem;
@@ -108,37 +130,16 @@ width: 100%;
 text-align: center;
 
 }
-.sellerForm input[type=text] {
+.addManager input[type=text] {
 padding: 0.5rem;
 margin-bottom: 1rem;
 border-radius: 0.5rem;
 border: 1px solid #ccc;
 width: 100%;
 text-align: center;
-}
-.sellerForm select {
-    box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-padding: 0.5rem;
-margin-bottom: 1rem;
-border-radius: 0.5rem;
-border: 1px solid #ccc;
-width: 100%;
-text-align: center;
-}
-.sellerForm input[type=file] {
-background-color: #333;
-color: #fff;
-border: none;
-border-radius: 0.5rem;
-padding: 0.5rem 1rem;
-cursor: pointer;
-width:100%;
-text-indent: 37%;
 }
 
-.sellerForm input[type=submit] {
+.addManager input[type=submit] {
 background-color: #333;
 color: #fff;
 border: none;
@@ -147,6 +148,6 @@ padding: 0.5rem 1rem;
 cursor: pointer;
 }
 
-.sellerForm input[type=submit]:hover {
+.addManager input[type=submit]:hover {
 background-color: #444;
 }
