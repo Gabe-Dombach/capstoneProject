@@ -24,7 +24,8 @@
     justify-content: space-evenly;
 }
 body{
-    background-color: lightcyan;
+    background-image: linear-gradient(rgb(143, 244, 240),rgb(125, 241, 168));
+    background-attachment: fixed;
 }
 .title{
     align-content: center;

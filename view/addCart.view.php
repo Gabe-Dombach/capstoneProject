@@ -11,13 +11,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
     <script src="https://kit.fontawesome.com/ed0b57e2ff.js" crossorigin="anonymous"></script>
-
+    
     <link rel="stylesheet" href="../view/css/addCart.css">
     <title>Joshuas' General's</title>
 </head>
 <body>
     <div class="navbar">
-        <?php require "navbar.view.php";?>
+    <?php require "navbar.view.php";?>
     <div class="item">
     <?php 
         while ($row = $res->fetch_assoc()) { // fetch the requested item from the database and display it

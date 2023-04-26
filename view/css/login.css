@@ -2,7 +2,7 @@
   border: 5px solid black;
   border-radius: 100px;
   margin: 10% 35% 0 35%;
-  background-color: lightgray;
+  background-color: white;
 }
 
 .loginform {
@@ -13,11 +13,11 @@
   margin-left: 20%;
   border: 2px solid black;
   border-radius: 5px;
-  background-color: lightcyan;
+  background-color: rgb(202, 169, 243);
 }
 
 .submit:hover {
-  background-color: lightgreen;
+  background-color:rgb(109, 130, 247);
 }
 
 .title {
@@ -27,10 +27,11 @@
 .input {
   border: 2px solid black;
   border-radius: 5px;
-  background-color: lightcyan;
+  background-color: white;
   text-align: center;
 }
 
 body {
-  background-color: lightsteelblue;
+  background-image: linear-gradient(rgb(202, 169, 243),rgb(109, 130, 247));
+  background-attachment: fixed;
 }

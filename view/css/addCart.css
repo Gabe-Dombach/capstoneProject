@@ -1,11 +1,6 @@
-
-
 .img{
-    width: 350px;
+    width: 400px;
     height: 250px;
-    
-    /* border: 5px solid black;
-    border-radius: 20px; */
 }
 .item{
     border: 3px solid black;
@@ -16,16 +11,19 @@
     background-color: white;
     align-items: center;
     text-align: center;
+    margin-left: 2%;
 }
 
 html,body{
     height: 100%;
-    background-color: lightcyan;
+    background-image: linear-gradient(rgb(66, 226, 221),rgb(90, 232, 142));
+    background-attachment: fixed;
     display: flex;
     flex-direction: row;
     /* padding-bottom: 5%; */
     align-content: center;
     justify-content: space-evenly;
+    margin-left: 2%;
 }
 
 .title{
@@ -43,10 +41,9 @@ html,body{
 
 .rating {
     border: none;
-display: flex;
-flex-direction: row-reverse;
-padding-right: 27%;
-
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 27%;
 }
 
 .rating input[type="radio"] {
