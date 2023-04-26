@@ -1,51 +1,44 @@
-.login{
-    border: solid black 5px;
-    border-radius: 100px;
-    margin-left: 35%;
-    margin-right: 35%;
-    margin-top: 10%;
-    background-color: lightgray;
+
+.login {
+  border: 5px solid black;
+  border-radius: 100px;
+  margin: 10% 35% 0 35%;
+  background-color: white;
+
 }
 .loginform{
     margin-left: 25%;
 }
-.submit{
-    margin-left: 20%;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: lightcyan;
+
+
+.submit {
+  margin-left: 20%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgb(202, 169, 243);
 }
-.submit:hover{
-    background-color: lightgreen;
+
+.submit:hover {
+  background-color:rgb(109, 130, 247);
+
 }
 .title{
     margin-left: -7%;
 }
-<<<<<<< Updated upstream
-.input{
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: lightcyan;
-    text-align: center;
-}
-body{
-    background-color:lightsteelblue;
-}
-=======
+
 
 .input {
   border: 2px solid black;
   border-radius: 5px;
-  background-color: lightcyan;
+  background-color: white;
   text-align: center;
 }
 
 body {
-      margin: 0;
-padding: 0;
-font-family: Arial, sans-serif;
-box-sizing: border-box;
-  background-color: lightsteelblue;
+
+  background-image: linear-gradient(rgb(202, 169, 243),rgb(109, 130, 247));
+  background-attachment: fixed;
+
 }
 header {
 background-color: #333;
@@ -54,4 +47,4 @@ display: flex;
 justify-content: space-between;
 padding: 1rem;
 }
->>>>>>> Stashed changes
+

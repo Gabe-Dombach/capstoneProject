@@ -3,6 +3,7 @@
     border-radius: 100px;
     margin-left: 35%;
     margin-right: 35%;
+    justify-content: center;
     margin-top: 10%;
     background-color: lightgray;
 }

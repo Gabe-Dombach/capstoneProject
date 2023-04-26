@@ -59,11 +59,15 @@ text-decoration: underline;
     justify-content: space-evenly;
 }
 body{
+
+    background-image: linear-gradient(rgb(143, 244, 240),rgb(125, 241, 168));
+    background-attachment: fixed;
+
     margin: 0;
 padding: 0;
 font-family: Arial, sans-serif;
 box-sizing: border-box;
-    background-color: lightcyan;
+
 }
 .title{
     align-content: center;
