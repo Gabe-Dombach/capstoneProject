@@ -127,6 +127,8 @@ margin-bottom: 1rem;
 border-radius: 0.5rem;
 border: 1px solid #ccc;
 width: 100%;
+text-align: center;
+
 }
 .addManager input[type=text] {
 padding: 0.5rem;
@@ -134,6 +136,7 @@ margin-bottom: 1rem;
 border-radius: 0.5rem;
 border: 1px solid #ccc;
 width: 100%;
+text-align: center;
 }
 
 .addManager input[type=submit] {
