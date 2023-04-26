@@ -9,15 +9,11 @@ session_start();
 
 
     $id = null;
-    if(!isset($_SESSION['ID'])){
-        header("Location: login.php?error=please login to veiw items");
-    }
-    else{
-        $id = $_SESSION['ID'];
-    }
-    if(isset($_POST['submitCart'])){
+ 
 
+    if(isset($_POST['submitCart'])){
         $item = $_POST['valueAddCart'];
+
         $quantity = $_POST['quantity'];
 
         $conn = connect();
@@ -26,18 +22,15 @@ session_start();
         // echo $item;
         // exit();
         $res = mysqli_query($conn, $sql);
-        //echo  $res;
-       
-        // $price = $res;
+        $price = $res;
+        //echo $price;
         
 
 
-        
-
-        
+        // echo $item;
         // exit();
         $id = $_SESSION['ID'];
-        $sql = "INSERT INTO carts VALUES('$id','$item','$quantity','$price');";
+        $sql = "INSERT INTO carts VALUES($id,$item,$quantity,$price);";
         echo $sql;
         $conn = connect();
 

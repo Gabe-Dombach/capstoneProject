@@ -109,7 +109,6 @@ while ($row = $res->fetch_assoc()) {
     echo '  <form action="../scripts/addCart.php" method="GET">
                 <input type=hidden name="cartItem" value="' . htmlspecialchars($row['ID']) . '">
                 <input type=hidden name="cartItemName" value="' . htmlspecialchars($row['title']) . '">
-                
 
                 <input class="btn" type=submit value="View Item" name="cartSubmit">
             </form>';

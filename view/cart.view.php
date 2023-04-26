@@ -32,8 +32,8 @@ echo '<div class="row">';
 echo '<div class="item">';
 echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
 echo '<img class="img" src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
+echo '<p>Price: $' . htmlspecialchars($row['price']) . '</p>';
 echo '  <form action="../scripts/cart.php" method="POST">
-    <p>Price: $' . htmlspecialchars($row['price']) . '</p>
     <input type=hidden name="cartItem" value="' . htmlspecialchars($row['ID']) . '">
     <input type=hidden name="cartItemName" value="' . htmlspecialchars($row['title']) . '">
   
