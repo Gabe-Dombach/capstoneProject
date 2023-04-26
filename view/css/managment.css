@@ -96,3 +96,55 @@ box-sizing: border-box;
 
     flex-wrap: wrap;
   }
+
+input[type=submit]:disabled  {
+    pointer-events: none;
+    background-color: #666;
+    opacity: 0.3;
+
+}
+/* Password form styles */
+.addManager {
+    width:40%;
+margin-top: 2rem;
+margin-left:30%;
+}
+
+.addManager form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.addManager h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+
+.addManager input[type=password] {
+padding: 0.5rem;
+margin-bottom: 1rem;
+border-radius: 0.5rem;
+border: 1px solid #ccc;
+width: 100%;
+}
+.addManager input[type=text] {
+padding: 0.5rem;
+margin-bottom: 1rem;
+border-radius: 0.5rem;
+border: 1px solid #ccc;
+width: 100%;
+}
+
+.addManager input[type=submit] {
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 0.5rem;
+padding: 0.5rem 1rem;
+cursor: pointer;
+}
+
+.addManager input[type=submit]:hover {
+background-color: #444;
+}
