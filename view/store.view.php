@@ -12,11 +12,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <title>Joshua's Generals</title>
 
-    <?php require "navbar.view.php";?>
 
     <link rel="stylesheet" href="../view/css/Store.css">
     </head>
     <body>
+    <header>
+        <?php require "navbar.view.php";?>
+    </header>
     <div class="header">
     <h1>Joshua's Generals</h1>
     <div class = searchbar>
