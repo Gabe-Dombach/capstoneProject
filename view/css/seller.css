@@ -1,4 +1,9 @@
 /* form styling */
+body{    margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+box-sizing: border-box;}
+
 form {
   display: flex;
   flex-direction: column;
@@ -6,6 +11,13 @@ form {
   align-items: center;
 
   margin-top: 50px;
+}
+header {
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: space-between;
+padding: 1rem;
 }
 
 input {

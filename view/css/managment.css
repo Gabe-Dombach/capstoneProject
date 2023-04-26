@@ -87,3 +87,12 @@ box-sizing: border-box;
     align-content: center;
     text-align: center;
 }
+#comments{
+    overflow-y: scroll;
+
+    width: 50%;
+    height: 50%;
+
+
+    flex-wrap: wrap;
+  }

@@ -28,7 +28,18 @@
     text-align: center;
 }
 body{
+        margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+box-sizing: border-box;
     background-color:lightsteelblue;
+}
+header {
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: space-between;
+padding: 1rem;
 }
 .link{
     margin-left: -10%;

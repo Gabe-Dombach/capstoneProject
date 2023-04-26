@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="../view/css/login.css" />
     </head>
     <body>
-
+            <header>
             <?php require "navbar.view.php";?>
+            </header>
 
 
         <div class="login">
