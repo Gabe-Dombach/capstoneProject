@@ -8,7 +8,6 @@
 }
 .csform{
     margin-left: 25%;
-    padding: 3%;
 }
 .submit{
     margin-left: 20%;
@@ -29,7 +28,22 @@
     text-align: center;
 }
 body{
+<<<<<<< Updated upstream
+    background-color:lightsteelblue;
+=======
+        margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+box-sizing: border-box;
     background-color:lightcyan;
+>>>>>>> Stashed changes
+}
+header {
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: space-between;
+padding: 1rem;
 }
 #message{
     height: 20%;

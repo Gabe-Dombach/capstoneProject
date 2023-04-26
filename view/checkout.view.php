@@ -15,27 +15,40 @@
 
         <div class="items">
         <h2>Items</h2>
-            <div class="item">
-            <h3>Item 1 picture</h3>
-            <p>Item 1</p>
-            <p>Item 1 price</p>
-            </div>
-            <br>
-            <div class="item">
-            <h3>Item 2 picture</h3>
-            <p>Item 2</p>
-            <p>Item 2 price</p>
-            </div>
-            <br>
-            <div class="item">
-            <h3>Item 3 picture</h3>
-            <p>Item 3</p>
-            <p>Item 3 price</p>
-            </div>
-            <div class="item">
-            <h3>Item 4 picture</h3>
-            <p>Item 4</p>
-            <p>Item 4 price</p>
+
+        <?php
+
+$sql = 'SELECT * FROM carts INNER JOIN inventory WHERE carts.itemID = inventory.ID';
+$conn = connect();
+$res = mysqli_query($conn, $sql);
+
+// Display the inventory items
+$count = 0;
+
+while ($row = $res->fetch_assoc()) {
+
+if ($count % 3 == 0) {
+echo '<div class="row">';
+}
+echo '<div class="item">';
+echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
+echo '<p>Price: $' . htmlspecialchars($row['']) . '</p>';
+
+$count++;
+if ($count % 3 == 0) {
+echo '</div>';
+}
+
+}
+
+echo '<div class="item">';
+echo '<p>Price: $' . htmlspecialchars($row['SELECT * FROM carts INNER JOIN inventory WHERE carts.itemID = inventory.ID  AS total ']) . '</p>';
+echo '</div>';
+
+
+
+?>
+            
             </div>
         </div>
         <div class="paymentinfo">

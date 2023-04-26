@@ -42,7 +42,12 @@ text-decoration: none;
 nav ul li a:hover {
 text-decoration: underline;
 }
+input[type=submit]:disabled  {
+    pointer-events: none;
+    background-color: #666;
+    opacity: 0.3;
 
+}
 /* Password form styles */
 .passwordForm {
     width:40%;
@@ -169,5 +174,17 @@ margin-left: 1rem;
 .showCards button[type=submit] {
 background-color: #333;
 color: #fff;
-border:none;
+border: none;
+border-radius: 0.5rem;
+padding: 0.5rem 1rem;
+cursor: pointer;
+}
+
+.showCards button[type="submit"]:hover{
+    background-color: #444;
+
+}
+input[type=submit]:disabled {
+    background-color: #666;
+
 }

@@ -23,18 +23,20 @@ ul.nav a:hover,
 ul.nav li.current a {
     background:#086754;
 }
-#logout{float:right;}
 </style>
 
 
 
 <?php
 
-if (!isset($_SESSION['user'])) {
+
+
+if(!isset($_SESSION['user'])){
     echo '<ul class="nav">
     <li><a href="../scripts/store.php">Home</a></li>
     <li><a href="../scripts/login.php">Log In</a></li>
 </ul>';
+
 
 } else {
     if ($_SESSION['accntType'] == 'mgr') {
@@ -63,8 +65,13 @@ if (!isset($_SESSION['user'])) {
     <li><a href="../scripts/cart.php">My Cart</a></li>
 
     <li><a href="../scripts/logout.php" ID="logout">Log Out</a></li>
+
 </ul>';
 
-    }}
+
+
+}}
+
+
 
 ?>

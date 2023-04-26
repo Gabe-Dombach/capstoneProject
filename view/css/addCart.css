@@ -1,5 +1,7 @@
 .img{
+
     width: 400px;
+
     height: 250px;
 }
 .item{
@@ -9,30 +11,42 @@
     height: fit-content;
     margin-top: 3%;
     background-color: white;
+
     align-items: center;
     text-align: center;
     margin-left: 2%;
 }
-
+body{    margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+box-sizing: border-box;}
 html,body{
     height: 100%;
+
     background-image: linear-gradient(rgb(66, 226, 221),rgb(90, 232, 142));
     background-attachment: fixed;
     display: flex;
+
     flex-direction: row;
     /* padding-bottom: 5%; */
     align-content: center;
     justify-content: space-evenly;
     margin-left: 2%;
 }
-
+header {
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: space-between;
+padding: 1rem;
+}
 .title{
     align-content: center;
     text-align: center;
 }
 #btn{
     border: 3px solid black;
-    max-width: 45%;
+    max-width: 40%;
     border-radius: 10px;
 }
 #btn:hover{
@@ -41,9 +55,11 @@ html,body{
 
 .rating {
     border: none;
+
     display: flex;
     flex-direction: row-reverse;
     padding-right: 27%;
+
 }
 
 .rating input[type="radio"] {
@@ -58,7 +74,7 @@ html,body{
     cursor: pointer;
 }
 
-.rating label:hover::before,
+.rating label:hover:before,
 .rating label:hover ~ label:before {
     content: "\f005";
     color: #FFD700;

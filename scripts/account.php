@@ -36,7 +36,6 @@ else{
     $cards = $conn->query($sql);
 
 
-require_once "../view/account.view.php";
 
 // Process form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -53,7 +52,10 @@ if (isset($_POST["cardRemoval"])) {
             $stmt->bind_param("s", $card_num);
             $stmt->execute();
             $stmt->close();
-            // echo "<script>location.reload();</script>";
+            header("Location:account.php");
+            exit();
+
+            // //echo "<script>location.reload();</script>";
             // exit();
         }
     }
@@ -85,11 +87,12 @@ if(isset($_POST["changePassword"])){
     $stmt = $conn->prepare("UPDATE users SET pswrd = ? WHERE ID = ?");
     $stmt->bind_param("si",$newHashPass, $id);
     if($stmt->execute()){
-        echo "Password changed successfully";
+        //echo "Password changed successfully";
     } else {
-        echo "Error: " . $stmt->error;
+        //echo "Error: " . $stmt->error;
     }
     mysqli_close($conn);
+    header("Location:account.php");
     exit();
 }
 
@@ -109,7 +112,7 @@ if(isset($_POST["changePassword"])){
         }
 
         // $date = date_create($d);
-        // echo date_format($date,"Y/m/d");
+        // //echo date_format($date,"Y/m/d");
         // exit();
 
         $sql = "INSERT INTO cards VALUES
@@ -118,7 +121,9 @@ if(isset($_POST["changePassword"])){
         $stmt->bind_param("ssss", $id,$crdNum,$secCode,$d);
         $stmt->execute();
         $stmt->close();
-        // echo "insertion sucessfull";
+        header("Location:account.php");
+        echo "insertion sucessfull";
+        exit();
 
 
     }
@@ -132,9 +137,8 @@ $conn->close();
 
 
 
-header("Refresh:0",false);
-exit();
 
 }
+require_once "../view/account.view.php";
 
 ?>

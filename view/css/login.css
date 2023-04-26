@@ -1,13 +1,15 @@
+
 .login {
   border: 5px solid black;
   border-radius: 100px;
   margin: 10% 35% 0 35%;
   background-color: white;
+
+}
+.loginform{
+    margin-left: 25%;
 }
 
-.loginform {
-  margin-left: 25%;
-}
 
 .submit {
   margin-left: 20%;
@@ -18,11 +20,12 @@
 
 .submit:hover {
   background-color:rgb(109, 130, 247);
+
+}
+.title{
+    margin-left: -7%;
 }
 
-.title {
-  margin-left: -7%;
-}
 
 .input {
   border: 2px solid black;
@@ -32,6 +35,16 @@
 }
 
 body {
+
   background-image: linear-gradient(rgb(202, 169, 243),rgb(109, 130, 247));
   background-attachment: fixed;
+
 }
+header {
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: space-between;
+padding: 1rem;
+}
+

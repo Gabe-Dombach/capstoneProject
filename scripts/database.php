@@ -53,13 +53,26 @@ $sql =
     
     CREATE TABLE IF NOT EXISTS carts(
         custID BIGINT,
-        itemID BIGINT);
+        itemID BIGINT,
+        quantity BIGINT,
+        UNIQUE (itemID));
+
+        
+        CREATE TABLE IF NOT EXISTS totals(
+
+#use item id and amount to get your total
+itemID
+amount
+
+
+            );
 
 CREATE TABLE IF NOT EXISTS supportcomments(
     name  VARCHAR(50),
     email VARCHAR(100)
     phoneNumber VARCHAR(50),
     Comment VARCHAR(1000),
+
     ";
 
 
