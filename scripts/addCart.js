@@ -13,4 +13,8 @@ $(document).ready(function () {
             $('#reveiwData').css('border', '1px solid black');
         }
     });
+
+    $('#quantity').on ("input", function () {
+        $("#priceField").text('Price: $' + Math.ceil(($('#originalPrice').val() * $('#quantity').val()) *100)/100);
+    });
 });

@@ -25,7 +25,6 @@ session_start();
         $price = $res;
         //echo $price;
         
-        
 
 
         // echo $item;
