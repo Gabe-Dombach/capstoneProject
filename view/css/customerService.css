@@ -1,0 +1,35 @@
+.cs{
+    border: solid black 5px;
+    border-radius: 100px;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10%;
+    background-color: lightgray;
+}
+.csform{
+    margin-left: 25%;
+}
+.submit{
+    margin-left: 20%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightcyan;
+}
+.submit:hover{
+    background-color: lightgreen;
+}
+.title{
+    margin-left: -7%;
+}
+.input{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightcyan;
+    text-align: center;
+}
+body{
+    background-color:lightsteelblue;
+}
+#message{
+    height: 20%;
+}
