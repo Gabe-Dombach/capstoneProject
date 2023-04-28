@@ -1,17 +1,13 @@
 $(document).ready(function () {
     $('input[type="submit"]').prop('disabled', true);
 
-    $('.managmentInput').keyup(function () {
-        // console.log("working");
+    $('#managmentInput').keyup(function () {
         var allFilled = true;
-        $('.managmentInput').each(function () {
-            // console.log($(this).val());
+        $('#managmentInput').each(function () {
             if ($(this).val() == '') {
                 allFilled = false;
-                // console.log(allFilled);
             }
         });
-        
         $('#managmentSubmit').prop('disabled', !allFilled);
     });
 });
