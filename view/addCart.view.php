@@ -18,7 +18,9 @@
 <body>
 
     <div class="navbar">
+    <header>
     <?php require "navbar.view.php";?>
+    </header>
 
     <div class="item">
     <?php 

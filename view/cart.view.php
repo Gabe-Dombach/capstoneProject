@@ -6,16 +6,7 @@
 <link rel="manifest" href="../pictures/favicon_io/site.webmanifest">
     </head>
     <body>
-            <?php 
-           
-           require "navbar.view.php";
-           
-            
-            ?>
-
-            
-
-
+        <header><?php require "navbar.view.php";?></header>
 <?php
 
 $sql = 'SELECT * FROM carts INNER JOIN inventory WHERE carts.itemID = inventory.ID';

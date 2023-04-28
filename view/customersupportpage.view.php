@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../view/css/customerService.css" />
     </head>
     <body>
+        <header><?php require 'navbar.view.php'?></header>
         <div class="cs">
             <div class="csform">
                 <div class="title"><h1>Joshua's Generals Customer Service</h1></div>
