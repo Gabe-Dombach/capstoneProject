@@ -7,6 +7,7 @@
         if(!isset($_POST['username']) || !isset($_POST['password'])){
             header("Location:login.php?error=2");
         }
+    }
 
         $user = $_POST['username'];
         $inpass = $_POST['password'];
@@ -24,6 +25,7 @@
             $_SESSION['ID'] = $data[0]['ID'];
             $_SESSION['accntType'] = $data[0]['accntType'];
             $_SESSION['LAST_ACTIVITY'] = time();
+        }
 
             if($data[0]['accntType'] == 'mgr'){
                 mysqli_close($conn);
