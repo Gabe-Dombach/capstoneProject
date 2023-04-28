@@ -37,7 +37,6 @@ session_start();
         
         // exit();
         $id = $_SESSION['ID'];
-
         $sql = "INSERT INTO carts VALUES('$id','$item','$quantity','$price');";
         echo $sql;
         $conn = connect();
