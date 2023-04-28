@@ -6,8 +6,9 @@
     if(isset($_POST['login'])){
         if(!isset($_POST['username']) || !isset($_POST['password'])){
             header("Location:login.php?error=2");
+            exit();
         }
-    }
+    
 
         $user = $_POST['username'];
         $inpass = $_POST['password'];
@@ -27,21 +28,63 @@
             $_SESSION['LAST_ACTIVITY'] = time();
         }
 
-            if($data[0]['accntType'] == 'mgr'){
+
+    $sql = "SELECT pswrd, accntType, ID FROM users WHERE email = ?";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        mysqli_close($conn);
+        header("Location: login.php?error=3");
+        exit();
+    } else {
+        mysqli_stmt_bind_param($stmt, "s", $user);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        if (mysqli_num_rows($result) == 1) {
+            $data = mysqli_fetch_assoc($result);
+            if (password_verify($inpass, $data['pswrd'])) {
+                session_start();
+                $_SESSION['user'] = $user;
+                $_SESSION['ID'] = $data['ID'];
+                $_SESSION['accntType'] = $data['accntType'];
+                $_SESSION['LAST_ACTIVITY'] = time();
+                if(isset($_GET['purl'])){
+                    $url = $_GET['purl'];
+                    if(strpos($url,"addCart.php")!== false){
+                    $url .= "&cartSubmit=View Item";}
+            
+                    mysqli_close($conn);
+                    header('Location:'.$url);
+                }
+                else{
+                switch ($data['accntType']) {
+                    case 'mgr':
+                        mysqli_stmt_close($stmt);
+                        mysqli_close($conn);
+                        header("Location: manager.php");
+                        exit();
+                    case 'usr':
+                        mysqli_stmt_close($stmt);
+                        mysqli_close($conn);
+                        header("Location: store.php");
+                        exit();
+                    case 'slr':
+                        mysqli_stmt_close($stmt);
+                        mysqli_close($conn);
+                        header("Location: seller.php");
+                        exit();
+                    default:
+                        header("Location: login.php?error=3");
+                        exit();
+                }}
+            } else {
                 mysqli_close($conn);
-                header("Location:manager.php");
-            }
-            if($data[0]['accntType'] == 'usr'){
-                mysqli_close($conn);
-                header("Location:store.php");
-            }
-            if($data[0]['accntType'] == 'slr'){
-                mysqli_close($conn);
-                header("Location:seller.php");
+                header("Location: login.php?error=3");
+                exit();
+
             }
         }
         else{header("Location:login.php?error=3");}
 
-    }
+    }}
 
 ?>

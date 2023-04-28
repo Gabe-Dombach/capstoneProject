@@ -1,17 +1,6 @@
 /* form styling */
-body{    margin: 0;
-padding: 0;
-font-family: Arial, sans-serif;
-box-sizing: border-box;}
 
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  margin-top: 50px;
-}
+/* Header styles */
 header {
 background-color: #333;
 color: #fff;
@@ -20,59 +9,151 @@ justify-content: space-between;
 padding: 1rem;
 }
 
-input {
-  text-align: center;
+/* Navigation styles */
+nav {
+display: flex;
 }
 
-::-webkit-input-placeholder {
-  text-align: center;
+nav ul {
+list-style: none;
+margin: 0;
+padding: 0;
 }
 
-:-moz-placeholder {
-  text-align: center;
+nav ul li {
+margin-left: 1rem;
 }
 
-input[type="text"],
-input[type="file"],
-select {
-  width: 80%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-
+nav ul li:first-child {
+margin-left: 0;
 }
 
-/* style file input */
-input[type="file"] {
-  background-color: white;
-  color: black;
-  font-size: 1em;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  cursor: pointer;
+nav ul li a {
+color: #fff;
+text-decoration: none;
 }
 
-input[type="file"]:hover {
-  background-color: #f1f1f1;
+nav ul li a:hover {
+text-decoration: underline;
 }
 
-/* submit button styling */
-input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 1em;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+
+
+
+body{
+    margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+box-sizing: border-box;
+    background-color: lightcyan;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column;
+}
+header {
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: space-between;
+padding: 1rem;
+}
+.title{
+    align-content: center;
+    text-align: center;
+}
+.imgview{
+    width: 20%;
+    height: 10%;
+    border: 5px solid black;
+}
+.btn{
+    border: 3px solid black;
+    max-width: 40%;
+    border-radius: 10px;
+    
+}
+.btn:hover{
+    background-color: lightcyan;
+}
+.header{
+    align-content: center;
+    text-align: center;
 }
 
-input[type="submit"]:hover {
-  background-color: #45a049;
+
+input[type=submit]:disabled  {
+    pointer-events: none;
+    background-color: #666;
+    opacity: 0.3;
+
+}
+/* Password form styles */
+.sellerForm {
+    width:40%;
+margin-top: 2rem;
+margin-left:20%;
+}
+
+.sellerForm form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.sellerForm h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+
+.sellerForm input[type=password] {
+padding: 0.5rem;
+margin-bottom: 1rem;
+border-radius: 0.5rem;
+border: 1px solid #ccc;
+width: 100%;
+text-align: center;
+
+}
+.sellerForm input[type=text] {
+padding: 0.5rem;
+margin-bottom: 1rem;
+border-radius: 0.5rem;
+border: 1px solid #ccc;
+width: 100%;
+text-align: center;
+}
+.sellerForm select {
+    box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+padding: 0.5rem;
+margin-bottom: 1rem;
+border-radius: 0.5rem;
+border: 1px solid #ccc;
+width: 100%;
+text-align: center;
+}
+.sellerForm input[type=file] {
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 0.5rem;
+padding: 0.5rem 1rem;
+cursor: pointer;
+width:100%;
+text-indent: 37%;
+}
+
+.sellerForm input[type=submit] {
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 0.5rem;
+padding: 0.5rem 1rem;
+cursor: pointer;
+}
+
+.sellerForm input[type=submit]:hover {
+background-color: #444;
 }

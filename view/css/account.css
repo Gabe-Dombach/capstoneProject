@@ -1,0 +1,190 @@
+/* Body styles */
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: space-between;
+padding: 1rem;
+}
+
+/* Navigation styles */
+nav {
+display: flex;
+}
+
+nav ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+nav ul li {
+margin-left: 1rem;
+}
+
+nav ul li:first-child {
+margin-left: 0;
+}
+
+nav ul li a {
+color: #fff;
+text-decoration: none;
+}
+
+nav ul li a:hover {
+text-decoration: underline;
+}
+input[type=submit]:disabled  {
+    pointer-events: none;
+    background-color: #666;
+    opacity: 0.3;
+
+}
+/* Password form styles */
+.passwordForm {
+    width:40%;
+margin-top: 2rem;
+margin-left:30%;
+}
+
+.passwordForm form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.passwordForm h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+
+.passwordForm input[type=password] {
+padding: 0.5rem;
+margin-bottom: 1rem;
+border-radius: 0.5rem;
+border: 1px solid #ccc;
+width: 100%;
+}
+
+.passwordForm input[type=submit] {
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 0.5rem;
+padding: 0.5rem 1rem;
+cursor: pointer;
+}
+
+.passwordForm input[type=submit]:hover {
+background-color: #444;
+}
+
+/* Card form styles */
+.cardForm {
+    width:40%;
+    margin-top: 2rem;
+    margin-left:30%;
+
+}
+
+.cardForm form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.cardForm h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+
+.cardForm input[type=number] {
+padding: 0.5rem;
+margin-bottom: 1rem;
+border-radius: 0.5rem;
+border: 1px solid #ccc;
+width: 100%;
+}
+
+.cardForm .expyDate {
+display: flex;
+margin-bottom: 1rem;
+}
+
+.cardForm .expyDate select {
+padding: 0.5rem;
+border-radius: 0.5rem;
+border: 1px solid #ccc;
+width: 5rem;
+}
+
+.cardForm .expyDate p {
+margin: 0 0.5rem;
+font-size: 1.5rem;
+line-height: 1.5rem;
+}
+
+.cardForm input[type=submit] {
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 0.5rem;
+padding: 0.5rem 1rem;
+cursor: pointer;
+}
+
+.cardForm input[type=submit]:hover {
+background-color: #444;
+}
+
+/* Show cards styles */
+.showCards {
+    margin-left:46%;
+    width:40%;
+    margin-top: 2rem;
+}
+
+.showCards h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+
+.showCards ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.showCards li {
+margin-bottom: 1rem;
+}
+
+.showCards li input[type=checkbox] {
+margin-left: 1rem;
+}
+
+.showCards button[type=submit] {
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 0.5rem;
+padding: 0.5rem 1rem;
+cursor: pointer;
+}
+
+.showCards button[type="submit"]:hover{
+    background-color: #444;
+
+}
+input[type=submit]:disabled {
+    background-color: #666;
+
+}
