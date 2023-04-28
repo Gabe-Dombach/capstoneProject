@@ -58,7 +58,7 @@
                 <form action="../scripts/addCart.php"method="POST">
 
                     <fieldset class="rating">
-                        <legend class="legend">Please rate:</legend>
+                        <legend>Please rate:</legend>
 
                         <input type="radio" id="star1" name="reveiwRating" value="1" /><label for="star1" title="1 star"></label>
                         <input type="radio" id="star2" name="reveiwRating" value="2" /><label for="star2" title="2 stars"></label>
@@ -70,11 +70,11 @@
                     </fieldset>
 
                     <label for=reveiwData id="charCount"></label>
-                    <textarea style="resize: none;" class='no-outline' id="reveiwData" name="reveiwData" rows="5" cols="40" maxlength="200"></textarea>
+                    <textarea class='no-outline' id="reveiwData" name="reveiwData" maxlength="200"></textarea>
                     
                     <input type="hidden" name="itemID" value="<?php echo $item;?>">
                     <input type="hidden" name="usrID" value="<?php echo$id;?>">
-                    <br>
+
                     <input type=submit value="submitReveiw" formaction="../scripts/addCart.php" name="submitReveiw">
                 </form>
             </div>

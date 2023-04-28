@@ -18,7 +18,11 @@ $res = mysqli_query($conn, $sql);
 
 
 
+if(isset($_POST[''])){
 
+
+
+}
 
 if(isset($_POST['cartRemove'])){
     $itemID = $_POST['cartItem'];

@@ -6,13 +6,12 @@ function connect(){
 $servername = "localhost";
 $username = "root";
 
-$password = "cset2023";
-$dbname = "joshuasgenerals";
+$password = "";
+$dbname = "postgres";
 
     return new mysqli($servername, $username, $password, $dbname);
 
 }
-
 
 
 
@@ -28,7 +27,7 @@ $sql =
         ID BIGINT,
         crdNum VARCHAR(19),
         srtyCode VARCHAR(4),
-        expDate VARCHAR(8),
+        expDate DATE,
         FOREIGN KEY (ID) REFERENCES users(id)
     );
 

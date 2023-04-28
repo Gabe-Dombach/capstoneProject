@@ -22,6 +22,7 @@ $sql = 'SELECT * FROM carts INNER JOIN inventory WHERE carts.itemID = inventory.
 $conn = connect();
 $res = mysqli_query($conn, $sql);
 
+$tot=0;
 // Display the inventory items
 $count = 0;
 
@@ -32,19 +33,21 @@ echo '<div class="row">';
 }
 echo '<div class="item">';
 echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
-echo '<p>Price: $' . htmlspecialchars($row['']) . '</p>';
-
+echo '<p name = "Stotal">Price: $' . htmlspecialchars($row['price'] * $row['quantity']) . '</p>';
+$tot = $tot + htmlspecialchars($row['price'] * $row['quantity']);
 $count++;
 if ($count % 3 == 0) {
 echo '</div>';
 }
 
+
 }
 
-echo '<div class="item">';
-echo '<p>Price: $' . htmlspecialchars($row['SELECT * FROM carts INNER JOIN inventory WHERE carts.itemID = inventory.ID  AS total ']) . '</p>';
-echo '</div>';
+echo '<div">';
 
+echo '<p> Total :'. $tot .' </p>';
+
+echo '</div>';
 
 
 ?>

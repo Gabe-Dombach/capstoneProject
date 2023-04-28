@@ -16,6 +16,7 @@ session_start();
         $id = $_SESSION['ID'];
     }
     if(isset($_POST['submitCart'])){
+
         $item = $_POST['valueAddCart'];
         $quantity = $_POST['quantity'];
 
@@ -36,7 +37,8 @@ session_start();
         
         // exit();
         $id = $_SESSION['ID'];
-        $sql = "INSERT INTO carts VALUES('$id','$item','$quantity',);";
+
+        $sql = "INSERT INTO carts VALUES('$id','$item','$quantity','$price');";
         echo $sql;
         $conn = connect();
 

@@ -6,6 +6,8 @@ if(!isset($_SESSION['ID'])){
     header("Location:login.php?error=Please Login to access cart");
 }
 
+
+
 $id = $_SESSION['ID'];
 $sql = "SELECT * FROM carts WHERE custID = $id";
 $conn = connect();
