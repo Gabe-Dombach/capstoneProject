@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    if ($('#comments ul li').length === 0) {
+        // console.log("hiding cards");
+        $('#comments').hide(); // hide the section if there are no li elements
+    }
+
+    
     $('input[type="submit"]').prop('disabled', true);
 
     $('#managmentInput').keyup(function () {

@@ -8,7 +8,7 @@
             header("Location:login.php?error=2");
             exit();
         }
-    
+
 
         $user = $_POST['username'];
         $inpass = $_POST['password'];
@@ -21,13 +21,14 @@
         $hash = $data[0]['pswrd'];
 
         if(password_verify($inpass,$hash)){
+            ini_set('session.gc_maxlifetime', 60 * 30);
+
             session_start();
             $_SESSION['user'] = $user;
             $_SESSION['ID'] = $data[0]['ID'];
             $_SESSION['accntType'] = $data[0]['accntType'];
             $_SESSION['LAST_ACTIVITY'] = time();
         }
-
 
     $sql = "SELECT pswrd, accntType, ID FROM users WHERE email = ?";
     $stmt = mysqli_stmt_init($conn);
