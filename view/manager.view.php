@@ -15,10 +15,10 @@
         </header>
 
         <form class="addManager" action="../scripts/manager.php" method="POST">
-            <input class="managmentInput"  type="text" name="email" placeholder="Email">
-            <input class="managmentInput"  type="text" name="fname" placeholder="First Name">
-            <input class="managmentInput"  type="text" name="lname" placeholder="Last Name">
-            <input class="managmentInput"  type="password" name="password" placeholder="Password">
+            <input id="managmentInput" type="text" name="email" placeholder="Email">
+            <input id="managmentInput" type="text" name="fname" placeholder="First Name">
+            <input id="managmentInput" type="text" name="lname" placeholder="Last Name">
+            <input id="managmentInput" type="password" name="password" placeholder="Password">
             <input id="managmentSubmit" type="submit" name="mngSub" value="add manager">
         </form>
 
@@ -27,6 +27,14 @@
 
 
     <div id="comments">
+        <ul>
+    <?php 
+
+// mysqli_query("SELECT * FROM ")
+
+                  
+    ?>
+        </ul>
         
     
     
@@ -41,12 +49,7 @@
 
 
 
-    <?php 
 
-// mysqli_query("SELECT * FROM ")
-
-                  
-    ?>
 
 
 

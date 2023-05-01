@@ -1,17 +1,19 @@
 $(document).ready(function () {
+    if ($('#comments ul li').length === 0) {
+        // console.log("hiding cards");
+        $('#comments').hide(); // hide the section if there are no li elements
+    }
+
+    
     $('input[type="submit"]').prop('disabled', true);
 
-    $('.managmentInput').keyup(function () {
-        // console.log("working");
+    $('#managmentInput').keyup(function () {
         var allFilled = true;
-        $('.managmentInput').each(function () {
-            // console.log($(this).val());
+        $('#managmentInput').each(function () {
             if ($(this).val() == '') {
                 allFilled = false;
-                // console.log(allFilled);
             }
         });
-        
         $('#managmentSubmit').prop('disabled', !allFilled);
     });
 });

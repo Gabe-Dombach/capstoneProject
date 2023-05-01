@@ -39,14 +39,14 @@ text-decoration: underline;
 .img{
     width: 70%;
     height: 40%;
-    border: 5px solid black;
+    
 }
 .item{
     border: 3px solid black;
     width: 20%;
     max-height: 20%;
     border-radius: 20px;
-    background-color: lightgrey;
+    background-color: white;
     align-items: center;
     text-align: center;
 }

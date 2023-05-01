@@ -10,7 +10,7 @@
     </head>
     <body>
 
-            <?php require "navbar.view.php";?>
+            <header><?php require "navbar.view.php";?></header>
 
 
         <div class="items">

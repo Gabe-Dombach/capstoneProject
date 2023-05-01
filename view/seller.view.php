@@ -12,7 +12,9 @@
     <title>Document</title>
 </head>
 <body>
-    <header><?php require "navbar.view.php";?></header>
+<header>
+        <?php require "navbar.view.php";?>
+</header>
 
     <div>
         <form class="sellerForm" action="../scripts/seller.php" method="POST" enctype="multipart/form-data">
@@ -31,7 +33,7 @@
             <input class="sellerForm" type = text placeholder="Price" name=price>
             <input class="sellerForm" type = text placeholder="Image name" name=altImg>
             <input class="sellerForm" type = file name=file>
-            <input class="sellerForm" type=submit name="sellSubmit" value="add item">
+            <input type=submit name="sellSubmit" value="add item">
         </form>
     </div>
 </body>

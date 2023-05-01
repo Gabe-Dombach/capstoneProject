@@ -14,7 +14,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#quantity').on ("input", function () {
+        $('#quantity').on ("input", function () {
         $("#priceField").text('Price: $' + Math.ceil(($('#originalPrice').val() * $('#quantity').val()) *100)/100);
     });
 });

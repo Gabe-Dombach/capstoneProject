@@ -17,6 +17,15 @@ session_start();
     }
     if(isset($_POST['submitCart'])){
 
+        if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+            // last request was more than 30 minutes ago
+            session_unset(); // unset $_SESSION variable for the run-time
+            session_destroy(); // destroy session data in storage
+        }
+        $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
+
+
+
         $item = $_POST['valueAddCart'];
         $quantity = $_POST['quantity'];
 
@@ -30,6 +39,7 @@ session_start();
        
         // $price = $res;
         
+        
 
 
         
@@ -37,7 +47,10 @@ session_start();
         
         // exit();
         $id = $_SESSION['ID'];
-        $sql = "INSERT INTO carts VALUES('$id','$item','$quantity','$price');";
+
+
+        $sql = "INSERT INTO carts VALUES('$id','$item','$quantity');";
+
         echo $sql;
         $conn = connect();
 
@@ -49,6 +62,14 @@ session_start();
 
 
     if(isset($_GET['cartSubmit'])){
+
+        if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+            // last request was more than 30 minutes ago
+            session_unset(); // unset $_SESSION variable for the run-time
+            session_destroy(); // destroy session data in storage
+}
+        $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
+
         $item = $_GET['cartItem'];
         $itemName = $_GET['cartItemName'];
         $conn = connect();
@@ -71,6 +92,15 @@ session_start();
     }}
 
     if(isset($_POST['submitReveiw'])){// check if the user has submitted a reveiw form
+        if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+            // last request was more than 30 minutes ago
+            session_unset(); // unset $_SESSION variable for the run-time
+            session_destroy(); // destroy session data in storage
+            header("Location:login.php");
+
+        }
+        $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
+
         $conn = connect();
         $reveiw = $_POST['reveiwData'];
         $rating = $_POST['reveiwRating'];

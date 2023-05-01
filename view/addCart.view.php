@@ -13,12 +13,14 @@
     <script src="https://kit.fontawesome.com/ed0b57e2ff.js" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="../view/css/addCart.css">
-    <title>Joshuas' General's: <?php echo($itemName);?></title>
+    <title>Joshuas' General's: <?=$itemName?></title>
 </head>
 <body>
 
-        <header><?php require "navbar.view.php";?></header>
-
+    <div class="navbar">
+    <header>
+    <?php require "navbar.view.php";?>
+    </header>
 
     <div class="item">
     <?php 
@@ -27,11 +29,10 @@
         echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
         echo '<p>' . htmlspecialchars($row['description']) . '</p>';
         echo '<img class="img" src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
-        echo '<p id=priceField>Price: $' . htmlspecialchars($row['price']) . '</p>';
+        echo '<p id="priceField">Price: $' . htmlspecialchars($row['price']) . '</p>';
         echo '<form action=addCart.php method=POST>
-                    <input type=hidden name="valueAddCart" value="' . htmlspecialchars($row['ID']).'">
-                    <p> enter an amount of product below </p> 
-                    <input type="hidden" id="originalPrice" value="' . htmlspecialchars($row['price']).'">
+                    <input id="originalPrice" type=hidden name="valueAddCart" value="' . htmlspecialchars($row['price']).'">
+                    <p > enter an amount of product below </p> 
                     <input type="number" id="quantity" name="quantity" min="1" max="100" placeholder="1-100" value="1"> <br> <br>
                     <input type=submit value="Add To Cart" name="submitCart" id="btn">
              </form>';
@@ -58,13 +59,13 @@
                 <form action="../scripts/addCart.php"method="POST">
 
                     <fieldset class="rating">
-                        <legend>Please rate:</legend>
+                        <legend class="rlegend">Please rate:</legend>
 
-                        <input type="radio" id="star1" name="reveiwRating" value="1" /><label for="star1" title="1 star"></label>
-                        <input type="radio" id="star2" name="reveiwRating" value="2" /><label for="star2" title="2 stars"></label>
-                        <input type="radio" id="star3" name="reveiwRating" value="3" /><label for="star3" title="3 stars"></label>
-                        <input type="radio" id="star4" name="reveiwRating" value="4" /><label for="star4" title="4 stars"></label>
                         <input type="radio" id="star5" name="reveiwRating" value="5" /><label for="star5" title="5 stars"></label>
+                        <input type="radio" id="star4" name="reveiwRating" value="4" /><label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star3" name="reveiwRating" value="3" /><label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star2" name="reveiwRating" value="2" /><label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star1" name="reveiwRating" value="1" /><label for="star1" title="1 star"></label>
 
 
                     </fieldset>

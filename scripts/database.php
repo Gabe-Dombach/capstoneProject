@@ -6,8 +6,8 @@ function connect(){
 $servername = "localhost";
 $username = "root";
 
-$password = "";
-$dbname = "postgres";
+$password = "cset2023";
+$dbname = "joshuasgenerals";
 
     return new mysqli($servername, $username, $password, $dbname);
 

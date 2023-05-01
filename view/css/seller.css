@@ -51,6 +51,13 @@ box-sizing: border-box;
     align-content: center;
     flex-flow: column;
 }
+header {
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: space-between;
+padding: 1rem;
+}
 .title{
     align-content: center;
     text-align: center;
