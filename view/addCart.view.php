@@ -29,9 +29,9 @@
         echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
         echo '<p>' . htmlspecialchars($row['description']) . '</p>';
         echo '<img class="img" src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
-        echo '<p id="priceField">Price: $' . htmlspecialchars($row['price']) . '</p>';
+        echo '<p id="priceField" name="price">Price: $' . htmlspecialchars($row['price']) . '</p>';
         echo '<form action=addCart.php method=POST>
-                    <input id="originalPrice" type=hidden name="valueAddCart" value="' . htmlspecialchars($row['price']).'">
+                    <input id="originalPrice" type=hidden name="valueAddCart" value="' . htmlspecialchars($row['ID']).'">
                     <p > enter an amount of product below </p> 
                     <input type="number" id="quantity" name="quantity" min="1" max="100" placeholder="1-100" value="1"> <br> <br>
                     <input type=submit value="Add To Cart" name="submitCart" id="btn">
