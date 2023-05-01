@@ -1,6 +1,4 @@
 .img{
-
-
     width: 400px;
 
     height: 250px;
@@ -9,12 +7,10 @@
 .item{
     border: 3px solid black;
     width: 100%;
-    height: 100%;
-
-    background-color: lightgrey;
+    height: fit-content;
+    background-color: white;
     align-items: center;
     text-align: center;
-    margin-left: 2%;
 }
 body{    margin: 0;
 padding: 0;
@@ -22,15 +18,12 @@ font-family: Arial, sans-serif;
 box-sizing: border-box;}
 html,body{
     height: 100%;
-
     background-image: linear-gradient(rgb(66, 226, 221),rgb(90, 232, 142));
     background-attachment: fixed;
     display: flex;
-
     flex-direction: row;
-    /* padding-bottom: 5%; */
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-left: 2%;
 }
 header {
