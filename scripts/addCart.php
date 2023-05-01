@@ -27,7 +27,11 @@ session_start();
 
 
         $item = $_POST['valueAddCart'];
+
+
         $quantity = $_POST['quantity'];
+
+        $price = $_POST['price'];
 
         $conn = connect();
         $sql = "SELECT price FROM inventory WHERE  ID = '$item';";
@@ -46,10 +50,10 @@ session_start();
 
         
         // exit();
-        $id = $_SESSION['ID'];
+      
 
 
-        $sql = "INSERT INTO carts VALUES('$id','$item','$quantity');";
+        $sql = "INSERT INTO carts VALUES('$id','$item','$quantity','$price');";
 
         echo $sql;
         $conn = connect();
@@ -70,8 +74,11 @@ session_start();
 }
         $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
 
+    
+
         $item = $_GET['cartItem'];
         $itemName = $_GET['cartItemName'];
+
         $conn = connect();
         $sql = "SELECT * FROM inventory WHERE ID = '$item';";
         // echo gettype($item);
