@@ -27,6 +27,14 @@
 
 
     <div id="comments">
+        <ul>
+    <?php 
+
+// mysqli_query("SELECT * FROM ")
+
+                  
+    ?>
+        </ul>
         
     
     
@@ -41,12 +49,7 @@
 
 
 
-    <?php 
 
-// mysqli_query("SELECT * FROM ")
-
-                  
-    ?>
 
 
 
