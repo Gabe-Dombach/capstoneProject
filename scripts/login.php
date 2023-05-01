@@ -8,7 +8,7 @@
             header("Location:login.php?error=2");
             exit();
         }
-    
+
 
         $user = $_POST['username'];
         $inpass = $_POST['password'];
@@ -26,7 +26,6 @@
             $_SESSION['ID'] = $data[0]['ID'];
             $_SESSION['accntType'] = $data[0]['accntType'];
             $_SESSION['LAST_ACTIVITY'] = time();
-        }
 
 
     $sql = "SELECT pswrd, accntType, ID FROM users WHERE email = ?";
