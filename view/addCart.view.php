@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/ed0b57e2ff.js" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="../view/css/addCart.css">
-    <title>Joshuas' General's: <?php echo($itemName);?></title>
+    <title>Joshuas' General's: <?=$itemName?></title>
 </head>
 <body>
 
