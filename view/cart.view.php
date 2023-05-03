@@ -27,7 +27,7 @@ echo '  <form action="../scripts/cart.php" method="POST">
     <p>Price: $' . htmlspecialchars($row['price']) . '</p>
     <input type=hidden name="cartItem" value="' . htmlspecialchars($row['ID']) . '">
     <input type=hidden name="cartItemName" value="' . htmlspecialchars($row['title']) . '">
-  
+
     <p>' . htmlspecialchars($row['quantity']) .  ' ' . htmlspecialchars($row['title']) . ' </p> 
 
     <input class="btn" type=submit value=Remove from cart" name="cartRemove">
@@ -44,7 +44,7 @@ echo '</div>';
 
 
 ?>
-         
+
 <br>
 <form action="../scripts/checkout.php">
 <input type=submit value="Confirm purachase" formaction="../scripts/checkout.php">
@@ -52,6 +52,6 @@ echo '</div>';
 
 
 
-        
+
     </body>
 </html>
