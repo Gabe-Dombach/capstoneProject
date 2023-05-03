@@ -4,6 +4,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../pictures/favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../pictures/favicon_io/favicon-16x16.png">
 <link rel="manifest" href="../pictures/favicon_io/site.webmanifest">
+<link rel="stylesheet" href="../view/css/cart.css">
     </head>
     <body>
         <header><?php require "navbar.view.php";?></header>
