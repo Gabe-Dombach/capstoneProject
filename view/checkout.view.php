@@ -1,6 +1,5 @@
 <html>
     <head>
-<h1>Checkout</h1>
 
 <link rel="stylesheet" href="../view/css/checkout.css">
 <link rel="apple-touch-icon" sizes="180x180" href="../pictures/favicon_io/apple-touch-icon.png">
@@ -12,9 +11,9 @@
 
             <header><?php require "navbar.view.php";?></header>
 
-
+            <h2>Checkout</h2>
         <div class="items">
-        <h2>Items</h2>
+        
 
         <?php
 
@@ -45,9 +44,9 @@ echo '</div>';
 
 echo '<div">';
 
-echo '<p> Total :'. $tot .' </p>';
+echo '<p> Total :$'. $tot .' </p>';
 
-echo '</div>';
+// echo '</div>';
 
 
 ?>
@@ -84,8 +83,13 @@ echo '</div>';
             <br>
             <input type="radio" name="shipping" value="3"> Same day delivery(+$6.99)</radio>
             <br>
-            <input type="submit" name="submit">
+            <input type="submit" name="submit" onclick="popup()">
         </form>
         </div>
     </body>
+    <script>
+        function popup(){
+            window.location.href="store.php";
+        }
+        </script>
 </html>
