@@ -83,13 +83,14 @@ echo '<p> Total :$'. $tot .' </p>';
             <br>
             <input type="radio" name="shipping" value="3"> Same day delivery(+$6.99)</radio>
             <br>
-            <input type="submit" name="submit" onclick="popup()">
+            <input type="button" name="submit" value="Submit" onclick="popup()">
         </form>
         </div>
     </body>
     <script>
         function popup(){
-            window.location.href="store.php";
+            alert("Order confirmed, Thank you!")
+            window.location.replace("../scripts/store.php")
         }
         </script>
 </html>
