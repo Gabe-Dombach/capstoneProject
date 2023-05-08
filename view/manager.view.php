@@ -27,14 +27,29 @@
 
 
     <div id="comments">
+        <form action="../scripts/manager.php" method="post">
         <ul>
     <?php 
+    $conn = connect();
+$res = mysqli_query($conn,"SELECT * FROM supportcomments");
+while ($row = $res->fetch_assoc()) { ?>
+    <div class="complaint">
+        <div>
+        <h1>USER: <?=$row['email']?></h1>
+        </div>
+            <h3>Phone: <?=$row['phoneNumber'] ?></h3>
+            <h3>Email: <?=$row['email'] ?></h3>
+            <p>Message: <?=$row['Comment']?></p>
+            <input type="hidden" name="compID[] value="<?=$row['ID']?>/>
+            <label for="deleteCheckbox">Mark As Resolved: </label>
+            <input id="deleteCheckbox" type="checkbox" name="DELETE[] value="<?=$row['ID']?>/>
+        <div>
 
-// mysqli_query("SELECT * FROM ")
-
-                  
-    ?>
+        </div>
+    </div>
+<?php } ?>
         </ul>
+        </form>
         
     
     
