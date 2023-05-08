@@ -40,19 +40,10 @@ if ($count % 3 == 0) {
 echo '</div>';
 }
 }
-
-
-
-
 ?>
-
 <br>
 <form action="../scripts/checkout.php">
 <input type=submit value="Confirm purachase" formaction="../scripts/checkout.php">
 </form>
-
-
-
-
     </body>
 </html>

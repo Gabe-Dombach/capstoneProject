@@ -1,5 +1,9 @@
 <?php 
 session_start();
+require "database.php";
+
+
+
 if(isset($_POST['mngSub'])){
     if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
     // last request was more than 30 minutes ago
@@ -7,9 +11,7 @@ if(isset($_POST['mngSub'])){
     session_destroy();
     header("Location:login.php"); // destroy session data in storage and redirect to login page
 }
-$_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
-
-    require "database.php";
+    $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
     $email = $_POST['email'];
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
