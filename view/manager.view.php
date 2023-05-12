@@ -29,45 +29,28 @@
     <div id="comments">
         <form action="../scripts/manager.php" method="post">
         <ul>
-    <?php 
-    $conn = connect();
-$res = mysqli_query($conn,"SELECT * FROM supportcomments");
-while ($row = $res->fetch_assoc()) { ?>
-    <div class="complaint">
-        <div>
-        <h1>USER: <?=$row['email']?></h1>
-        </div>
-            <h3>Phone: <?=$row['phoneNumber'] ?></h3>
-            <h3>Email: <?=$row['email'] ?></h3>
-            <p>Message: <?=$row['Comment']?></p>
-            <input type="hidden" name="compID[] value="<?=$row['ID']?>/>
-            <label for="deleteCheckbox">Mark As Resolved: </label>
-            <input id="deleteCheckbox" type="checkbox" name="DELETE[] value="<?=$row['ID']?>/>
-        <div>
-
-        </div>
-    </div>
-<?php } ?>
+        <?php 
+            $conn = connect();
+            $res = mysqli_query($conn,"SELECT * FROM supportcomments");
+            while ($row = $res->fetch_assoc()) { ?>
+                <div class="complaint">
+                    <div>
+                        <h1>USER: <?=$row['email']?></h1>
+                    </div>
+                    <h3>Phone: <?=$row['phoneNumber'] ?></h3>
+                    <h3>Email: <?=$row['email'] ?></h3>
+                    <p>Message: <?=$row['Comment']?></p>
+                    <label for="deleteCheckbox">Mark As Resolved: </label>
+                    <input required type="hidden" name="compID[]" value="<?=$row['ID']?>"/>
+                    <input  class="deleteCheckbox" type="checkbox" name="delete[]" value="<?=$row['ID']?>"/>
+        
+                </div>
+        <?php } ?>
         </ul>
-        </form>
-        
-    
-    
-    
-    
     </div>
+    <button type="submit" name="deleteSupportComment" value="Mark Selected As Resolved">Mark As Resolved</button>
+    </form>
         
-
-
-
-
-
-
-
-
-
-
-
     <script src="../scripts/managment.js"></script>
     </body>
 </html>
