@@ -27,20 +27,21 @@ if (isset($_POST['submitCart'])) {
     $quantity = $_POST['quantity'];
 
     $price = $_POST['price'];
-
-    $conn = connect();
-    $sql = "SELECT price FROM inventory WHERE  ID = '$item';";
-    // echo gettype($item);
-    // echo $item;
+    // echo "price: " . $price;
     // exit();
-    $res = mysqli_query($conn, $sql);
+    $conn = connect();
+    // $sql = "SELECT price FROM inventory WHERE  ID = '$item';";
+    // // echo gettype($item);
+    // // echo $item;
+    // // exit();
+    // $res = mysqli_query($conn, $sql);
     //echo  $res;
 
     // $price = $res;
 
     // exit();
 
-    $sql = "INSERT INTO carts VALUES('$id','$item','$quantity','$price');";
+    $sql = "INSERT INTO carts VALUES('$id','$item','$quantity',$price);";
 
     echo $sql;
     $conn = connect();
