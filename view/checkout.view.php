@@ -18,7 +18,7 @@
 
         <?php
 
-$sql = 'SELECT * FROM carts INNER JOIN inventory WHERE carts.itemID = inventory.ID';
+$sql = "SELECT * FROM carts INNER JOIN inventory WHERE carts.itemID = inventory.ID AND custID = $id";
 $conn = connect();
 $res = mysqli_query($conn, $sql);
 
@@ -88,7 +88,7 @@ echo '<p> Total :$'. $tot .' </p>';
             <input type="radio" name="shipping" value="3"> Same day delivery(+$6.99)</radio>
         </form>
         <form method="POST" action="../scripts/checkout.php">
-            <input type="submit" name="removeAll" value="Submit" >
+            <input type="submit" name="removeAll" value="Submit" onclick="popup()">
         </form>
         </div>
 </div>
@@ -96,7 +96,7 @@ echo '<p> Total :$'. $tot .' </p>';
     <script>
         function popup(){
             alert("Order confirmed, Thank you!")
-            window.location.replace("../scripts/store.php")
+            // window.location.replace("../scripts/store.php")
         }
         
         </script>
