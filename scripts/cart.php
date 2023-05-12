@@ -8,7 +8,9 @@ if (!isset($_SESSION['ID'])) {
 
 require "database.php";
 $id = $_SESSION['ID'];
-$sql = "SELECT * FROM carts WHERE itemID = $id";
+$sql = "SELECT * FROM carts WHERE custID = $id";
+// echo $id;
+// exit();
 $conn = connect();
 
 $res = mysqli_query($conn, $sql);

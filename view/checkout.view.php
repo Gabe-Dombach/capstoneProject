@@ -12,6 +12,7 @@
             <header><?php require "navbar.view.php";?></header>
 
             <h2>Checkout</h2>
+            <div class="display">
         <div class="items">
         
 
@@ -27,17 +28,19 @@ $count = 0;
 
 while ($row = $res->fetch_assoc()) {
 
-if ($count % 3 == 0) {
-echo '<div class="row">';
-}
+// if ($count >=3) {
+// echo '<div class="row">';
+// }
 echo '<div class="item">';
 echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
+echo '<img class="img" src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
 echo '<p name = "Stotal">Price: $' . htmlspecialchars($row['price'] * $row['quantity']) . '</p>';
 $tot = $tot + htmlspecialchars($row['price'] * $row['quantity']);
 $count++;
-if ($count % 3 == 0) {
+echo $count;
+// if ($count >=3) {
 echo '</div>';
-}
+// }
 
 
 }
@@ -51,11 +54,12 @@ echo '<p> Total :$'. $tot .' </p>';
 
 ?>
             
-            </div>
+            
+        
         </div>
         <div class="paymentinfo">
             <h2>Payment and Shipping Information</h2>
-        <form method="POST">
+        <form method="POST" action="../scripts/checkout.php">
             <input type="text" placeholder="Card Number" name="cardnum">
             <br>
             <br>
@@ -82,15 +86,18 @@ echo '<p> Total :$'. $tot .' </p>';
             <input type="radio" name="shipping" value="2"> Express 1-2 day delivery(+$4.99)</radio>
             <br>
             <input type="radio" name="shipping" value="3"> Same day delivery(+$6.99)</radio>
-            <br>
-            <input type="button" name="submit" value="Submit" onclick="popup()">
+        </form>
+        <form method="POST" action="../scripts/checkout.php">
+            <input type="submit" name="removeAll" value="Submit" >
         </form>
         </div>
+</div>
     </body>
     <script>
         function popup(){
             alert("Order confirmed, Thank you!")
             window.location.replace("../scripts/store.php")
         }
+        
         </script>
 </html>

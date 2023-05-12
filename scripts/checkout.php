@@ -33,6 +33,13 @@ $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
 
 }
 
+if(isset($_POST['removeAll'])){
+    $sql = "DELETE FROM carts WHERE custID = $id";
+    $res = mysqli_query($conn,$sql);
+    header("Location:store.php");
+    exit();
+}
+
 
 
 
