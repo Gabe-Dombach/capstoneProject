@@ -10,7 +10,7 @@
         <header><?php require "navbar.view.php";?></header>
 <?php
 
-$sql = 'SELECT * FROM carts INNER JOIN inventory WHERE carts.itemID = inventory.ID';
+$sql = "SELECT * FROM carts INNER JOIN inventory WHERE carts.itemID = inventory.ID AND custID = $id";
 $conn = connect();
 $res = mysqli_query($conn, $sql);
 
