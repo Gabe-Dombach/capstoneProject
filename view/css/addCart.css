@@ -1,0 +1,85 @@
+.img{
+    width: 400px;
+
+    height: 250px;
+
+}
+.item{
+    border: 3px solid black;
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    align-items: center;
+    text-align: center;
+}
+body{    margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+box-sizing: border-box;}
+html,body{
+    height: 100%;
+    background-image: linear-gradient(rgb(66, 226, 221),rgb(90, 232, 142));
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    margin-left: 2%;
+}
+header {
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: space-between;
+padding: 1rem;
+}
+.title{
+    align-content: center;
+    text-align: center;
+}
+#btn{
+    border: 3px solid black;
+    max-width: 40%;
+    border-radius: 10px;
+}
+#btn:hover{
+    background-color: lightcyan;
+}
+
+.rating {
+    border: none;
+
+
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 27%;
+
+
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    content: "\f005";
+    cursor: pointer;
+}
+
+.rating label:hover:before,
+.rating label:hover ~ label:before {
+    content: "\f005";
+    color: #FFD700;
+}
+
+.rating input[type="radio"]:checked ~ label:before {
+    content: "\f005";
+    color: #FFD700;
+}
+
+.legend{
+    padding-left: 45%;
+}
