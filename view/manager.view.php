@@ -13,19 +13,20 @@
         <header>
             <?php require "navbar.view.php";?>
         </header>
-
+<section class="actionSection">
+    <div class = actionSectionContainer>
         <form class="addManager" action="../scripts/manager.php" method="POST">
-            <input id="managmentInput" type="text" name="email" placeholder="Email">
-            <input id="managmentInput" type="text" name="fname" placeholder="First Name">
-            <input id="managmentInput" type="text" name="lname" placeholder="Last Name">
-            <input id="managmentInput" type="password" name="password" placeholder="Password">
+            <input class="managmentInput" type="text" name="email" placeholder="Email">
+            <input class="managmentInput" type="text" name="fname" placeholder="First Name">
+            <input class="managmentInput" type="text" name="lname" placeholder="Last Name">
+            <input class="managmentInput" type="password" name="password" placeholder="Password">
             <input id="managmentSubmit" type="submit" name="mngSub" value="add manager">
         </form>
 
+    </div>
 
 
-
-
+    <div class="actionSectionContainer">
     <div id="comments">
         <form action="../scripts/manager.php" method="post">
         <ul>
@@ -48,9 +49,10 @@
         <?php } ?>
         </ul>
     </div>
-    <button type="submit" name="deleteSupportComment" value="Mark Selected As Resolved">Mark As Resolved</button>
+    <button id="removeCommentButton" type="submit" name="deleteSupportComment" value="Mark Selected As Resolved">Mark As Resolved</button>
     </form>
-        
+    </div>
+        </section>
     <script src="../scripts/managment.js"></script>
     </body>
 </html>
