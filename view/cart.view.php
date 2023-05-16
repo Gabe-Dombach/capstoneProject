@@ -6,26 +6,34 @@
 <link rel="manifest" href="../pictures/favicon_io/site.webmanifest">
 <link rel="stylesheet" href="../view/css/cart.css">
     </head>
-    <body>
+    <body class="body">
         <header><?php require "navbar.view.php";?></header>
+
+
+        <div class="box">
+        <div class="column">
 <?php
 
 $sql = "SELECT * FROM carts INNER JOIN inventory WHERE carts.itemID = inventory.ID AND custID = $id";
 $conn = connect();
 $res = mysqli_query($conn, $sql);
 
+
+
 // Display the inventory items
 $count = 0;
 
+
+
 while ($row = $res->fetch_assoc()) {
-if ($count % 3 == 0) {
-echo '<div class="row">';
-}
+
+
+
 echo '<div class="item">';
 echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
 echo '<img class="img" src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
 echo '  <form action="../scripts/cart.php" method="POST">
-    <p>Price: $' . htmlspecialchars($row['price']) . '</p>
+    <p>Price: $' . htmlspecialchars($row['price']*$row['quantity']) . '</p>
     <input type=hidden name="cartItem" value="' . htmlspecialchars($row['ID']) . '">
     <input type=hidden name="cartItemName" value="' . htmlspecialchars($row['title']) . '">
 
@@ -41,9 +49,23 @@ echo '</div>';
 }
 }
 ?>
-<br>
-<form action="../scripts/checkout.php">
-<input type=submit value="Confirm purachase" formaction="../scripts/checkout.php">
+
+
+
+<form action="../scripts/checkout.php" class="btnbox">
+<input class="button"  type=submit value="Confirm purachase" formaction="../scripts/checkout.php">
+
 </form>
+
+</div>
+
+</div>
+  
+
+<br>
+
+
+        
+
     </body>
 </html>

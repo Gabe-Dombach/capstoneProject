@@ -31,7 +31,9 @@
         echo '<img class="img" src="../pictures/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['imageAlt']) . '">';
         echo '<p id="priceField" name="price">Price: $' . htmlspecialchars($row['price']) . '</p>';
         echo '<form action=addCart.php method=POST>
+
                     <input id="originalPrice" type=hidden name="valueAddCart" value="' . htmlspecialchars($row['ID']).'">
+
                     <p > enter an amount of product below </p> 
                     <input type="hidden" name="price" value="' . htmlspecialchars($row['price']).'"/>
                     <input type="number" id="quantity" name="quantity" min="1" max="100" placeholder="1-100" value="1"> <br> <br>

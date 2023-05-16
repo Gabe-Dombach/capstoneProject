@@ -86,6 +86,42 @@
   <button type="submit" name="cardRemoval">Delete selected cards</button>
 </form>
 
+<?php
+
+
+if ($_SESSION['accntType'] == 'mgr') {
+$sql = 'SELECT * FROM supportcomments';
+$conn = connect();
+$res = mysqli_query($conn, $sql);
+
+$count = 0;
+while ($row = $res->fetch_assoc()) {
+    if ($count % 3 == 0) {
+        echo '<div class="row">';
+    }
+    echo '<div>';
+    
+
+    echo '<p>comment ' . htmlspecialchars($row['name']) . '</p>';
+    echo '<p>comment ' . htmlspecialchars($row['email']) . '</p>';
+    echo '<p>comment ' . htmlspecialchars($row['phoneNumber']) . '</p>';
+    echo '<p>comment:' . htmlspecialchars($row['Comment']) . '</p>';
+    
+    echo '</div>';
+    $count++;
+    if ($count % 3 == 0) {
+        echo '</div>';
+    }
+}
+
+
+
+
+mysqli_close($conn);
+}
+
+?>
+
 
         </section>
         <script src="../scripts/account.js"></script>

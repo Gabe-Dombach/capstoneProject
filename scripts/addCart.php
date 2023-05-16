@@ -26,6 +26,7 @@ if (isset($_POST['submitCart'])) {
 
     $quantity = $_POST['quantity'];
 
+
     $price = $_POST['price'];
     // echo "price: " . $price;
     // exit();
@@ -39,9 +40,11 @@ if (isset($_POST['submitCart'])) {
 
     // $price = $res;
 
+
     // exit();
 
     $sql = "INSERT INTO carts VALUES('$id','$item','$quantity',$price);";
+
 
     echo $sql;
     $conn = connect();
@@ -54,10 +57,12 @@ if (isset($_POST['submitCart'])) {
 
 if (isset($_GET['cartSubmit'])) {
 
+
     if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
         // last request was more than 30 minutes ago
         session_unset(); // unset $_SESSION variable for the run-time
         session_destroy(); // destroy session data in storage
+
     }
     $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
 
@@ -73,7 +78,12 @@ if (isset($_GET['cartSubmit'])) {
     $sql = "SELECT * FROM reveiws WHERE prodID = '$item';"; // fetch all reveiws for the item to be used on the veiw page
     $reveiwRes = mysqli_query($conn, $sql);
 
+
     mysqli_close($conn);
+
+    
+
+      
 
 } else {
     if ($item == "" and !isset($_POST['submitReveiw'])) {

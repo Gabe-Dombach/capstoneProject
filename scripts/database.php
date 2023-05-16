@@ -6,8 +6,8 @@ function connect(){
 $servername = "localhost";
 $username = "root";
 
-$password = "cset2023";
-$dbname = "joshuasgenerals";
+$password = "";
+$dbname = "postgres";
 
     return new mysqli($servername, $username, $password, $dbname);
 
@@ -54,6 +54,7 @@ $sql =
         custID BIGINT,
         itemID BIGINT,
         quantity BIGINT,
+        price FLOAT,
         UNIQUE (itemID));
 
         
