@@ -68,6 +68,7 @@ amount
             );
 
 CREATE TABLE IF NOT EXISTS supportcomments(
+    ID BIGINT AUTO_INCREMENT UNIQUE NOT NULL,
     name  VARCHAR(50),
     email VARCHAR(100)
     phoneNumber VARCHAR(50),

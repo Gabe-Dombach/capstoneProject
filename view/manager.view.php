@@ -13,46 +13,46 @@
         <header>
             <?php require "navbar.view.php";?>
         </header>
-
+<section class="actionSection">
+    <div class = actionSectionContainer>
         <form class="addManager" action="../scripts/manager.php" method="POST">
-            <input id="managmentInput" type="text" name="email" placeholder="Email">
-            <input id="managmentInput" type="text" name="fname" placeholder="First Name">
-            <input id="managmentInput" type="text" name="lname" placeholder="Last Name">
-            <input id="managmentInput" type="password" name="password" placeholder="Password">
+            <input class="managmentInput" type="text" name="email" placeholder="Email">
+            <input class="managmentInput" type="text" name="fname" placeholder="First Name">
+            <input class="managmentInput" type="text" name="lname" placeholder="Last Name">
+            <input class="managmentInput" type="password" name="password" placeholder="Password">
             <input id="managmentSubmit" type="submit" name="mngSub" value="add manager">
         </form>
 
-
-
-
-
-    <div id="comments">
-        <ul>
-    <?php 
-
-// mysqli_query("SELECT * FROM ")
-
-                  
-    ?>
-        </ul>
-        
-    
-    
-    
-    
     </div>
+
+
+    <div class="actionSectionContainer">
+    <div id="comments">
+        <form action="../scripts/manager.php" method="post">
+        <ul>
+        <?php 
+            $conn = connect();
+            $res = mysqli_query($conn,"SELECT * FROM supportcomments");
+            while ($row = $res->fetch_assoc()) { ?>
+                <div class="complaint">
+                    <div>
+                        <h1>USER: <?=$row['email']?></h1>
+                    </div>
+                    <h3>Phone: <?=$row['phoneNumber'] ?></h3>
+                    <h3>Email: <?=$row['email'] ?></h3>
+                    <p>Message: <?=$row['Comment']?></p>
+                    <label for="deleteCheckbox">Mark As Resolved: </label>
+                    <input required type="hidden" name="compID[]" value="<?=$row['ID']?>"/>
+                    <input  class="deleteCheckbox" type="checkbox" name="delete[]" value="<?=$row['ID']?>"/>
         
-
-
-
-
-
-
-
-
-
-
-
+                </div>
+        <?php } ?>
+        </ul>
+    </div>
+    <button id="removeCommentButton" type="submit" name="deleteSupportComment" value="Mark Selected As Resolved">Mark As Resolved</button>
+    </form>
+    </div>
+        </section>
     <script src="../scripts/managment.js"></script>
     </body>
 </html>

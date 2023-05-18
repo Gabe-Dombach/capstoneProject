@@ -71,18 +71,18 @@
 <form action="../scripts/account.php" method="post">
     <input required type="hidden" name="csrf_token" value="<?=$token;?>">
 
-  <ul>
+<ul>
     <?php while ($row = $cards->fetch_assoc()) { ?>
-      <li>
+    <li>
         <?php
         $card_num = htmlspecialchars($row["crdNum"]);
         echo str_repeat('*', MAX(4, strlen($card_num)) - 4) . substr($card_num, -4);
         ?>
         <input required type="hidden" name="cards[]" value="<?php echo $card_num; ?>">
         <input required type="checkbox" name="delete[]" value="<?php echo $card_num; ?>">
-      </li>
+    </li>
     <?php } ?>
-  </ul>
+</ul>
   <button type="submit" name="cardRemoval">Delete selected cards</button>
 </form>
 

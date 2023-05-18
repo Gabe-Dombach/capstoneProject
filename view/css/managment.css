@@ -52,7 +52,7 @@ text-decoration: underline;
 }
 .row{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-bottom: 3%;
     height: 20%;
     align-content: center;
@@ -64,6 +64,8 @@ padding: 0;
 font-family: Arial, sans-serif;
 box-sizing: border-box;
     background-color: lightcyan;
+    display: flex;
+    flex-direction: column;
 }
 .title{
     align-content: center;
@@ -114,6 +116,7 @@ margin-left:30%;
 display: flex;
 flex-direction: column;
 align-items: center;
+width:100%;
 }
 
 .addManager h3 {
@@ -150,4 +153,39 @@ cursor: pointer;
 
 .addManager input[type=submit]:hover {
 background-color: #444;
+}
+
+.actionSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:100%;
+    margin-left: 5%;
+}
+
+.actionSectionContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    height:80vh;
+    width:50%;
+}
+
+#comments{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#removeCommentButton{
+    width:60%;
+    background-color: #333;
+color: #fff;
+border: none;
+border-radius: 0.5rem;
+padding: 0.5rem 1rem;
+cursor: pointer;
+}
+#removeCommentButton:hover {
+    background-color: #444;
+
 }

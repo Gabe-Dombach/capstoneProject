@@ -41,10 +41,15 @@ $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
                     ($sellID,'$dep','$title','$descrpt','$newFileName','$alt',$price);";
             $res = mysqli_query($conn, $sql);
             if(!$res){
+                $conn->close();
+                echo "error";
                 header("Location:seller.php?error=4");
+                exit();
             }
             else{
                 echo("Listing Posted");
+                $conn->close();
+                exit();
             }
 
         }

@@ -23,7 +23,6 @@
     <h1>Joshua's Generals</h1>
     <div class = searchbar>
         <form class="departmentForm" method="GET">
-            <label for="department">Browse by department:</label>
             <select name="department" id="department">
                 <option value="" <?php if (!isset($_GET['department'])) {
     echo 'selected';

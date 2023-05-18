@@ -27,15 +27,11 @@
                         <input type="text" placeholder="Email" name="email" class="input">
                         <br>
                         <br>
-
                         <input type="text" class="input" placeholder="Write your message here" id="message" name="message">
-
                         <br>
                         <br>
                         <input type="submit" name="submit" class="submit">
                     </form>
-
-
                     <?php 
                     
                      // getting all values from the HTML form
@@ -49,13 +45,10 @@
     }
 
     // database details
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "postgres";
+
 
     // creating a connection
-    $con = mysqli_connect($host, $username, $password, $dbname);
+    $con = connect();
 
     // to ensure that the connection is made
     if (!$con)

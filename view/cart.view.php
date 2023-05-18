@@ -14,7 +14,7 @@
         <div class="column">
 <?php
 
-$sql = 'SELECT * FROM carts INNER JOIN inventory WHERE carts.itemID = inventory.ID';
+$sql = "SELECT * FROM carts INNER JOIN inventory WHERE carts.itemID = inventory.ID AND custID = $id";
 $conn = connect();
 $res = mysqli_query($conn, $sql);
 
@@ -36,7 +36,7 @@ echo '  <form action="../scripts/cart.php" method="POST">
     <p>Price: $' . htmlspecialchars($row['price']*$row['quantity']) . '</p>
     <input type=hidden name="cartItem" value="' . htmlspecialchars($row['ID']) . '">
     <input type=hidden name="cartItemName" value="' . htmlspecialchars($row['title']) . '">
-  
+
     <p>' . htmlspecialchars($row['quantity']) .  ' ' . htmlspecialchars($row['title']) . ' </p> 
 
     <input class="btn" type=submit value=Remove from cart" name="cartRemove">
@@ -48,11 +48,8 @@ if ($count % 3 == 0) {
 echo '</div>';
 }
 }
-
-
-
-
 ?>
+
 
 
 <form action="../scripts/checkout.php" class="btnbox">
@@ -69,5 +66,6 @@ echo '</div>';
 
 
         
+
     </body>
 </html>
